@@ -5,6 +5,23 @@ React Native Button component for iOS & Android
 ## Installation
 `npm install --save react-native-button-component`
 
+## Some Simple Examples
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
+  One State Button
+</a>
+<br>
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/MultipleStatesButtons.js" target="_blank">
+  Multiple States Button
+</a>
+<br>
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/SpinnerButtons.js" target="_blank">
+  Spinner Button
+</a>
+<br>
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/ProgressButtons.js" target="_blank">
+  Progress Button
+</a>
+
 ## Documents
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/props-and-button-state-attributes.md" target="_blank">
   Props & Button State Object Attributes
