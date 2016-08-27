@@ -66,7 +66,7 @@ class InnerButton extends Component {
     if (this.props.text) {
       text = (
         <Animated.Text style={[styles.text, this.props.textStyle, this.props.textAnim]}>
-          <Text>{this.props.text.toUpperCase()}</Text>
+          <Text>{this.props.text}</Text>
         </Animated.Text>
       );
     }
