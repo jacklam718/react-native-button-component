@@ -6,14 +6,10 @@
     "start": "react-native start"
   },
   "dependencies": {
-    "lodash": "^4.14.1",
     "react": "15.2.1",
     "react-native": "0.31.0",
-    "react-native-button-component": "file:///Users/jacklam/Downloads/react-native-button-component",
-    "react-native-circular-progress": "0.0.7",
-    "react-native-linear-gradient": "^1.5.12",
-    "react-native-spinkit": "^0.1.2",
-    "react-native-vector-icons": "^2.0.3"
+    "react-native-button-component": "../../",
+    "react-native-vector-icons": "^2.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.0",
