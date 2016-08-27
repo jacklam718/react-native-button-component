@@ -2,6 +2,9 @@
 
 React Native Button component for iOS & Android
 
+<img src="https://www.dropbox.com/s/z08r0upac76b959/IMG_0386.PNG?dl=1" width="300">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.dropbox.com/s/n3vk9ifykhkggbh/IMG_0387.PNG?dl=1" width="300">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.dropbox.com/s/g1ydd940z2bo3i6/IMG_0388.PNG?dl=1" width="300">
+
+
 ## Installation
 `npm install --save react-native-button-component`
 
