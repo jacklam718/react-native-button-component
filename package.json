@@ -29,15 +29,13 @@
   "homepage": "https://github.com/jacklam718/react-native-button-component/blob/master/README.md",
   "dependencies": {
     "lodash": "^4.14.1",
-    "react": "15.2.1",
-    "react-native": "0.31.0",
     "react-native-circular-progress": "0.0.7",
     "react-native-linear-gradient": "^1.5.12",
-    "react-native-spinkit": "^0.1.2"
+    "react-native-spinkit": "^0.1.2",
+    "babel-preset-react-native-stage-0": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.0",
-    "babel-preset-react-native-stage-0": "^1.0.1",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.10.0",
