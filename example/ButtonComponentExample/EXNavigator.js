@@ -6,6 +6,7 @@ import OneStateButtons from './js/containers/OneStateButtons';
 import MultipleStatesButtons from './js/containers/MultipleStatesButtons';
 import ProgressButtons from './js/containers/ProgressButtons';
 import SpinnerButtons from './js/containers/SpinnerButtons';
+import CircleButtons from './js/containers/CircleButtons';
 
 export default class EXNavigator extends Component {
   configureScene() {
@@ -24,6 +25,9 @@ export default class EXNavigator extends Component {
     }
     if (route.name === 'spinnerButtons') {
       return <SpinnerButtons navigator={navigator} />;
+    }
+    if (route.name === 'circleButtons') {
+      return <CircleButtons navigator={navigator} />;
     }
 
     return <ButtonExplorer navigator={navigator} />;

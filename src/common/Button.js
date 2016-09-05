@@ -1,8 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import {
-  View,
-  Animated,
-} from 'react-native';
+import { View, Animated } from 'react-native';
 import _ from 'lodash';
 import InnerButton from './InnerButton';
 
@@ -33,7 +30,7 @@ class Button extends Component {
   shouldComponentUpdate(nextProps) {
     const { states, buttonState } = nextProps;
     if (states) {
-      return !!states[buttonState].progressFill;
+      return !!states[buttonState].progress;
     }
     return true;
   }
@@ -62,14 +59,16 @@ class Button extends Component {
     // create inner buttons for each button states
     if (this.props.states) {
       content = _.map(this.props.states, (buttonState, buttonStateName) => {
-        const { imageAnimConfig, textAnimConfig } = buttonState;
+        const { imageAnimConfig, textAnimConfig, progressAnimConfig } = buttonState;
         const imageAnim = imageAnimConfig ? this.createAnimation(imageAnimConfig) : null;
         const textAnim = textAnimConfig ? this.createAnimation(textAnimConfig) : null;
+        const progressAnim = progressAnimConfig ? this.createAnimation(progressAnimConfig) : null;
 
         return (
           <InnerButton
             key={buttonStateName}
             imageAnim={imageAnim}
+            progressAnim={progressAnim}
             textAnim={textAnim}
             {...this.props}
             {...buttonState}

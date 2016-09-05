@@ -19,6 +19,5 @@ const styles = StyleSheet.create({
     lineHeight: normalize(27),
     color: '#555454',
     fontWeight: 'bold',
-    letterSpacing: -1,
   },
 });
