@@ -2,8 +2,7 @@
 
 React Native Button component for iOS & Android
 
-![Example](https://jacklam718.github.io/react-native-button-component/build/video/circle-button-demo.gif)
-
+![Example](https://jacklam718.github.io/react-native-button-component/build/video/circle-button-demo.gif) 
 ![Example](https://jacklam718.github.io/react-native-button-component/build/video/button-demo.gif)
 
 ## Installation
