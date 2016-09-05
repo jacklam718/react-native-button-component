@@ -53,6 +53,17 @@ export default function ButtonExplorer(props) {
             });
           }}
         />
+
+        <ButtonComponent
+          style={styles.buttonStyle}
+          text="Circle Buttons"
+          onPress={() => {
+            props.navigator.push({
+              title: 'Circle Buttons',
+              name: 'circleButtons',
+            });
+          }}
+        />
       </View>
     </ScrollView>
   );
