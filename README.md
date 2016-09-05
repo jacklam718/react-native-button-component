@@ -1,9 +1,24 @@
 ## React Native Button component
 
-React Native Button component for iOS & Android
+React Native Button component for iOS & Android.
 
-![Example](https://jacklam718.github.io/react-native-button-component/build/video/circle-button-demo.gif) 
+![Example](https://jacklam718.github.io/react-native-button-component/build/video/circle-button-demo.gif)
 ![Example](https://jacklam718.github.io/react-native-button-component/build/video/button-demo.gif)
+
+
+## Provided Components
+This library provided the following button components:
+```
+ButtonComponent
+CircleButton
+RoundButton
+RectangleButton
+```
+
+#### Note:
+CircleButton, RoundButton, RectangleButton is on top of ButtonComponent.
+So I recommend you should use CircleButton, RoundButton, RectangleButton, rather than directly use ButtonComponent because those button components may have preset some options.
+
 
 ## Installation
 `npm install --save react-native-button-component`
@@ -24,26 +39,35 @@ React Native Button component for iOS & Android
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/ProgressButtons.js" target="_blank">
   Progress Button
 </a>
+<br>
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/CircleButtons.js" target="_blank">
+  Circle Button
+</a>
 
 ## Documents
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/props-and-button-state-attributes.md" target="_blank">
-  Props & Button State Object Attributes
+  Props & Button Options
 </a>
 <br />
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/progress-button-state-attributes.md" target="_blank">
-  Progress Button State Object Attributes
+  Options for Progress Button
 </a>
 <br />
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/spinner-button-state-attributes.md" target="_blank">
-  Spinner Button State Object Attributes
+  Options for Spinner Button
+</a>
+<br />
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/circle-button-attributes.md" target="_blank">
+  Options for Circle Button
 </a>
 
 ## Usage - Basic
 
 #### Button with one state
 ```javascript
-import ButtonComponent from 'react-native-button-component';
+import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'react-native-button-component';
 
+// You can use CircleButton, RoundButton, RectangleButton to instead ButtonComponent
 <ButtonComponent
   onPress={() => {}}
   image={require('button-image.png')}
@@ -54,8 +78,9 @@ import ButtonComponent from 'react-native-button-component';
 
 #### Button with multiple states
 ```javascript
-import ButtonComponent from 'react-native-button-component';
+import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'react-native-button-component';
 
+// You can use CircleButton, RoundButton, RectangleButton to instead ButtonComponent
 <ButtonComponent
   buttonState={this.state.uploadButtonState}
   states={{
@@ -100,8 +125,9 @@ import ButtonComponent from 'react-native-button-component';
 
 #### Button with multiple states - different config for different states
 ```javascript
-import ButtonComponent from 'react-native-button-component';
+import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'react-native-button-component';
 
+// You can use CircleButton, RoundButton, RectangleButton to instead ButtonComponent
 <ButtonComponent
   buttonState={this.state.uploadButtonState}
   gradientStart=[0.5, 1]

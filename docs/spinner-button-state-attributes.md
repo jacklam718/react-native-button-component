@@ -1,4 +1,4 @@
-## Spinner Button State Object Attributes
+## Options for Spinner Button
 | Attribute | Type | Default | Note |
 |---|---|---|---|
 | `spinner` | `Boolean` | | | |

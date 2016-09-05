@@ -1,4 +1,4 @@
-## Progress Button State Object Attributes
+## Options for Progress Button
 | Attribute | Type | Default | Note |
 |---|---|---|---|
 | `progress` | `Boolean` | | | |
