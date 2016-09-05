@@ -186,3 +186,6 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 >
 </ButtonComponent>
 ```
+
+## License
+MIT
