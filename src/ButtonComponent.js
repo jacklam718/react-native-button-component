@@ -14,6 +14,7 @@ const propTypes = {
   backgroundColors: PropTypes.array,
   buttonStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  progressSize: PropTypes.number,
   onPress: PropTypes.func,
 };
 
@@ -55,22 +56,21 @@ class ButtonComponent extends Component {
           imageStyle={this.props.imageStyle || imageStyle}
           imageAnimConfig={this.props.imageAnimConfig}
           textAnimConfig={this.props.textAnimConfig}
+          spinnerAnimConfig={this.props.spinnerAnimConfig}
+          spinner={this.props.spinner}
+          spinnerSize={this.props.spinnerSize}
+          spinnerType={this.props.spinnerType}
+          spinnerStyle={this.props.spinnerStyle}
+          spinnerColor={this.props.spinnerColor}
+          progressAnimConfig={this.props.progressAnimConfig}
+          progressSize={this.props.progressSize}
+          progressWidth={this.props.progressWidth}
+          progressTintColor={this.props.progressTintColor}
+          progressBackgroundColor={this.props.progressBackgroundColor}
+          progressStyle={this.props.progressStyle}
+          textInsideProgress={this.props.textInsideProgress}
         />
       );
-      // progressAnimConfig={this.props.progressAnimConfig}
-      // progressStyle={this.props.progressStyle}
-      // progressSize={this.props.progressSize}
-      // progressWidth={this.props.progressWidth}
-      // progressTintColor={this.props.progressTintColor}
-      // progressBackgroundColor={this.props.progressBackgroundColor}
-      // progressFill={this.props.progressFill}
-      // progress={this.props.progress}
-      // spinnerAnimConfig={this.props.spinnerAnimConfig}
-      // spinner={this.props.spinner}
-      // spinnerSize={this.props.spinnerSize}
-      // spinnerType={this.props.spinnerType}
-      // spinnerStyle={this.props.spinnerStyle}
-      // spinnerColor={this.props.spinnerColor}
     } else {
       button = (
         <Button
@@ -78,18 +78,6 @@ class ButtonComponent extends Component {
           imageStyle={this.props.imageStyle || imageStyle}
           text={this.props.text}
           image={this.props.image}
-          progressStyle={this.props.progressStyle}
-          progressSize={this.props.progressSize}
-          progressWidth={this.props.progressWidth}
-          progressTintColor={this.props.progressTintColor}
-          progressBackgroundColor={this.props.progressBackgroundColor}
-          progressFill={this.props.progressFill}
-          progress={this.props.progress}
-          spinner={this.props.spinner}
-          spinnerSize={this.props.spinnerSize}
-          spinnerType={this.props.spinnerType}
-          spinnerStyle={this.props.spinnerStyle}
-          spinnerColor={this.props.spinnerColor}
         />
       );
     }
@@ -99,6 +87,7 @@ class ButtonComponent extends Component {
 
   render() {
     let content;
+    let shape;
 
     const currentButtonState = (this.props.buttonState && this.props.states)
       ? this.props.states[this.props.buttonState]
@@ -109,11 +98,17 @@ class ButtonComponent extends Component {
     const gradientEnd = currentButtonState.gradientEnd
       ? currentButtonState.gradientEnd
       : this.props.gradientEnd;
-    const buttonHeight = currentButtonState.height ? currentButtonState.height : this.props.height;
-    const buttonWidth = currentButtonState.width ? currentButtonState.width : this.props.width;
     const backgroundColors = currentButtonState.backgroundColors || this.props.backgroundColors;
     const type = currentButtonState.type ? currentButtonState.type : this.props.type;
-    const shape = this.props.shape === 'round' ? { borderRadius: buttonHeight / 2 } : null;
+
+    const buttonHeight = currentButtonState.height ? currentButtonState.height : this.props.height;
+    const buttonWidth = currentButtonState.width ? currentButtonState.width : this.props.width;
+
+    if (this.props.shape === 'round' || this.props.shape === 'circle') {
+      shape = {
+        borderRadius: buttonHeight / 2,
+      };
+    }
 
     if (type === 'primary') {
       content = (
@@ -157,6 +152,7 @@ function configButtonStatesAnimation(buttonsStates, height) {
     const buttonState = buttonsStates[stateName];
     const textAnimConfig = {};
     const imageAnimConfig = {};
+    const progressAnimConfig = {};
 
     // config the text animations
     {
@@ -196,9 +192,22 @@ function configButtonStatesAnimation(buttonsStates, height) {
       imageAnimConfig.transform = [{ translateY }];
     }
 
+    // config the progress animations
+    {
+      const opacity = { inputRange: [], outputRange: [] };
+      const translateY = { inputRange: [], outputRange: [] };
+      opacity.inputRange.push(0, 1);
+      opacity.outputRange.push(0, 1);
+      translateY.inputRange.push(0, 0);
+      translateY.outputRange.push((0 - (height * 2) * i), (0 - (height * 2) * (i - 1)));
+      progressAnimConfig.opacity = opacity;
+      progressAnimConfig.transform = [{ translateY }];
+    }
+
     addedAnimtionConfigButtonStates[stateName] = {
       textAnimConfig,
       imageAnimConfig,
+      progressAnimConfig,
       ...buttonState,
     };
   }
@@ -214,7 +223,7 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
     backgroundColor: 'transparent',
-    paddingHorizontal: 40,
+    // paddingHorizontal: 40,
   },
   border: {
     borderWidth: 1,
