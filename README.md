@@ -24,40 +24,40 @@ So I recommend you should use CircleButton, RoundButton, RectangleButton, rather
 `npm install --save react-native-button-component`
 
 ## Some Simple Examples
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
   One State Button
 </a>
-<br>
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/MultipleStatesButtons.js" target="_blank">
+
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/MultipleStatesButtons.js" target="_blank">
   Multiple States Button
 </a>
-<br>
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/SpinnerButtons.js" target="_blank">
+
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/SpinnerButtons.js" target="_blank">
   Spinner Button
 </a>
-<br>
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/ProgressButtons.js" target="_blank">
+
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/ProgressButtons.js" target="_blank">
   Progress Button
 </a>
-<br>
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/CircleButtons.js" target="_blank">
+
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/CircleButtons.js" target="_blank">
   Circle Button
 </a>
 
 ## Documents
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/props-and-button-state-attributes.md" target="_blank">
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/props-and-button-state-attributes.md" target="_blank">
   Props & Button Options
 </a>
-<br />
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/progress-button-state-attributes.md" target="_blank">
+
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/progress-button-state-attributes.md" target="_blank">
   Options for Progress Button
 </a>
-<br />
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/spinner-button-state-attributes.md" target="_blank">
+
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/spinner-button-state-attributes.md" target="_blank">
   Options for Spinner Button
 </a>
-<br />
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/circle-button-attributes.md" target="_blank">
+
+* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/circle-button-attributes.md" target="_blank">
   Options for Circle Button
 </a>
 
@@ -186,6 +186,13 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 >
 </ButtonComponent>
 ```
+
+## Welcome become a contributor 😃👍
+
+## Style Guides
+
+  * [JavaScript](https://github.com/airbnb/javascript)
+  * [React](https://github.com/airbnb/javascript/tree/master/react)
 
 ## License
 MIT
