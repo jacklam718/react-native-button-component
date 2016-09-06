@@ -187,12 +187,17 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 </ButtonComponent>
 ```
 
-## Welcome become a contributor 😃👍
+## Welcome Become A Contributor 😃👍
 
-## Style Guides
+## Linting
+  * [Configure Text Editors](https://github.com/kriasoft/react-starter-kit/blob/master/docs/how-to-configure-text-editors.md)
 
+## Style Guides For This Project
   * [JavaScript](https://github.com/airbnb/javascript)
   * [React](https://github.com/airbnb/javascript/tree/master/react)
+
+## For Becoming A Contributor
+  You need to install linter & follow style guid, thanks.
 
 ## License
 MIT
