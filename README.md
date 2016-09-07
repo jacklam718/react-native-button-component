@@ -189,15 +189,14 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 
 ## Welcome Become A Contributor 😃👍
 
-## Linting
+## For Becoming A Contributor
+  You need to install eslinter & follow style guide, that can make sure consistent code style, thanks.
+#### Linting
   * [Configure Text Editors](https://github.com/kriasoft/react-starter-kit/blob/master/docs/how-to-configure-text-editors.md)
 
-## Style Guides For This Project
+#### Style Guides For This Project
   * [JavaScript](https://github.com/airbnb/javascript)
   * [React](https://github.com/airbnb/javascript/tree/master/react)
-
-## For Becoming A Contributor
-  You need to install linter & follow style guid, thanks.
 
 ## License
 MIT
