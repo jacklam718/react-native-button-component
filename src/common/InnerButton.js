@@ -93,8 +93,11 @@ class InnerButton extends Component {
         ];
       }
 
+      const progressAnim = this.props.textInsideProgress
+        ? this.props.progressAnim
+        : this.props.imageAnim;
       progress = (
-        <Animated.View style={[styles.progress, this.props.progressStyle, this.props.progressAnim]}>
+        <Animated.View style={[styles.progress, this.props.progressStyle, progressAnim]}>
           <AnimatedCircularProgress
             size={this.props.progressSize}
             width={this.props.progressWidth}
