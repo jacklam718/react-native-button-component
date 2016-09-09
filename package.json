@@ -28,10 +28,10 @@
   "license": "MIT",
   "homepage": "https://github.com/jacklam718/react-native-button-component/blob/master/README.md",
   "dependencies": {
-    "lodash": "^4.14.1",
+    "lodash": "4.14.1",
     "react-native-circular-progress": "0.0.7",
-    "react-native-linear-gradient": "^1.5.12",
-    "react-native-spinkit": "^0.1.2",
+    "react-native-linear-gradient": "1.5.12",
+    "react-native-spinkit": "0.1.2",
     "babel-preset-react-native-stage-0": "^1.0.1"
   },
   "devDependencies": {
