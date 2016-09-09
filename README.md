@@ -21,43 +21,59 @@ So I recommend you should use CircleButton, RoundButton, RectangleButton, rather
 
 
 ## Installation
-`npm install --save react-native-button-component`
+In the installation part have little bit inconvenience, I'm very sorry 😓
+
+1. `npm install --save react-native-button-component`
+
+2. Link ART library to your ReactNative project ([how to link a library?](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#content)). You'll find ReactART library in `node_modules/react-native/Libraries/ART/ART.xcodeproj`
+
+
+3. `rnpm link react-native-spinkit`
+
+4. `rnpm link react-native-linear-gradient`
+
+##### FYI: I used the following third party RN packages in this package. You can it out if you get more info.
+[react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
+<br>
+[react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
+<br>
+[react-native-circular-progress](https://github.com/bgryszko/react-native-circular-progress)
 
 ## Some Simple Examples
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
   One State Button
 </a>
-
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/MultipleStatesButtons.js" target="_blank">
+<br>
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/MultipleStatesButtons.js" target="_blank">
   Multiple States Button
 </a>
-
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/SpinnerButtons.js" target="_blank">
+<br>
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/SpinnerButtons.js" target="_blank">
   Spinner Button
 </a>
-
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/ProgressButtons.js" target="_blank">
+<br>
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/ProgressButtons.js" target="_blank">
   Progress Button
 </a>
-
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/CircleButtons.js" target="_blank">
+<br>
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/CircleButtons.js" target="_blank">
   Circle Button
 </a>
 
 ## Documents
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/props-and-button-state-attributes.md" target="_blank">
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/props-and-button-state-attributes.md" target="_blank">
   Props & Button Options
 </a>
-
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/progress-button-state-attributes.md" target="_blank">
+<br />
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/progress-button-state-attributes.md" target="_blank">
   Options for Progress Button
 </a>
-
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/spinner-button-state-attributes.md" target="_blank">
+<br />
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/spinner-button-state-attributes.md" target="_blank">
   Options for Spinner Button
 </a>
-
-* <a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/circle-button-attributes.md" target="_blank">
+<br />
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/docs/circle-button-attributes.md" target="_blank">
   Options for Circle Button
 </a>
 
@@ -186,17 +202,6 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 >
 </ButtonComponent>
 ```
-
-## Welcome Become A Contributor 😃👍
-
-## For Becoming A Contributor
-  You need to install eslinter & follow style guide, that can make sure consistent code style, thanks.
-#### Linting
-  * [Configure Text Editors](https://github.com/kriasoft/react-starter-kit/blob/master/docs/how-to-configure-text-editors.md)
-
-#### Style Guides For This Project
-  * [JavaScript](https://github.com/airbnb/javascript)
-  * [React](https://github.com/airbnb/javascript/tree/master/react)
 
 ## License
 MIT
