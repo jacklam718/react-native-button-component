@@ -1,6 +1,6 @@
 {
   "name": "react-native-button-component",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Beautiful, Customizable React Native Button component for iOS & Android",
   "main": "index.js",
   "directories": {
@@ -27,6 +27,11 @@
   "author": "jacklam <jacklam718@gmail.com> (https://github.com/jacklam718)",
   "license": "MIT",
   "homepage": "https://github.com/jacklam718/react-native-button-component/blob/master/README.md",
+  "rnpm": {
+    "commands": {
+      "postlink": "bash node_modules/react-native-button-component/link.sh"
+    }
+  },
   "dependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "lodash": "4.14.1",

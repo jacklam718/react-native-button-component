@@ -21,23 +21,11 @@ So I recommend you should use CircleButton, RoundButton, RectangleButton, rather
 
 
 ## Installation
-In the installation part have little bit inconvenience, I'm very sorry 😓
-
 1. `npm install --save react-native-button-component`
 
-2. Link ART library to your ReactNative project ([how to link a library?](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#content)). You'll find ReactART library in `node_modules/react-native/Libraries/ART/ART.xcodeproj`
+2. `react-native link` or `rnpm link`
 
-
-3. `rnpm link react-native-spinkit`
-
-4. `rnpm link react-native-linear-gradient`
-
-##### FYI: I used the following third party RN packages in this package. You can check it out if you want to get more info.
-[react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
-<br>
-[react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
-<br>
-[react-native-circular-progress](https://github.com/bgryszko/react-native-circular-progress)
+3. Link ART library to your ReactNative project ([how to link a library?](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#content)). You'll find ReactART library in `node_modules/react-native/Libraries/ART/ART.xcodeproj`
 
 ## Some Simple Examples
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
