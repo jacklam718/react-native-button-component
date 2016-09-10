@@ -32,7 +32,7 @@ In the installation part have little bit inconvenience, I'm very sorry 😓
 
 4. `rnpm link react-native-linear-gradient`
 
-##### FYI: I used the following third party RN packages in this package. You can it out if you get more info.
+##### FYI: I used the following third party RN packages in this package. You can check it out if you want to get more info.
 [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
 <br>
 [react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
