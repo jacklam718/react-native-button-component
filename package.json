@@ -29,7 +29,7 @@
   "homepage": "https://github.com/jacklam718/react-native-button-component/blob/master/README.md",
   "rnpm": {
     "commands": {
-      "postlink": "bash node_modules/react-native-button-component/link.sh"
+      "postlink": "bash node_modules/react-native-button-component/scripts/link.sh"
     }
   },
   "dependencies": {
