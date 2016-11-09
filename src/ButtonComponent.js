@@ -137,6 +137,8 @@ class ButtonComponent extends Component {
       <TouchableOpacity
         accessibilityTraits="button"
         onPress={currentButtonState.onPress}
+        onPressIn={currentButtonState.onPressIn}
+        onPressOut={currentButtonState.onPressOut}
         activeOpacity={0.9}
         style={[styles.container, { width: buttonWidth, height: buttonHeight }, this.props.style]}
       >
