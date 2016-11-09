@@ -28,6 +28,8 @@ const defaultProps = {
   height: 50,
 };
 
+const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
+
 class ButtonComponent extends Component {
   static propTypes = propTypes;
   static defaultProps = defaultProps;
@@ -112,7 +114,7 @@ class ButtonComponent extends Component {
 
     if (type === 'primary') {
       content = (
-        <Animated.LinearGradient
+        <AnimatedLinearGradient
           start={gradientStart}
           end={gradientEnd}
           colors={backgroundColors}
@@ -120,7 +122,7 @@ class ButtonComponent extends Component {
           style={[styles.button, shape, currentButtonState.buttonStyle]}
         >
           {this.renderButton({ textStyle: styles.text })}
-        </Animated.LinearGradient>
+        </AnimatedLinearGradient>
       );
     } else {
       const border = type === 'border' && styles.border;
