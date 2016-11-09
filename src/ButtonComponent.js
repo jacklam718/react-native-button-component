@@ -112,7 +112,7 @@ class ButtonComponent extends Component {
 
     if (type === 'primary') {
       content = (
-        <LinearGradient
+        <Animated.LinearGradient
           start={gradientStart}
           end={gradientEnd}
           colors={backgroundColors}
@@ -120,26 +120,26 @@ class ButtonComponent extends Component {
           style={[styles.button, shape, currentButtonState.buttonStyle]}
         >
           {this.renderButton({ textStyle: styles.text })}
-        </LinearGradient>
+        </Animated.LinearGradient>
       );
     } else {
       const border = type === 'border' && styles.border;
       content = (
-        <View style={[styles.button, border, shape, currentButtonState.buttonStyle]}>
+        <Animated.View style={[styles.button, border, shape, currentButtonState.buttonStyle]}>
           {this.renderButton({ textStyle: styles.secondaryText })}
-        </View>
+        </Animated.View>
       );
     }
 
     return (
-      <Animated.TouchableOpacity
+      <TouchableOpacity
         accessibilityTraits="button"
         onPress={currentButtonState.onPress}
         activeOpacity={0.9}
         style={[styles.container, { width: buttonWidth, height: buttonHeight }, this.props.style]}
       >
         {content}
-      </Animated.TouchableOpacity>
+      </TouchableOpacity>
     );
   }
 }
