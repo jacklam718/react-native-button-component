@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Animated } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Button from './common/Button';
 
@@ -132,14 +132,14 @@ class ButtonComponent extends Component {
     }
 
     return (
-      <TouchableOpacity
+      <Animated.TouchableOpacity
         accessibilityTraits="button"
         onPress={currentButtonState.onPress}
         activeOpacity={0.9}
         style={[styles.container, { width: buttonWidth, height: buttonHeight }, this.props.style]}
       >
         {content}
-      </TouchableOpacity>
+      </Animated.TouchableOpacity>
     );
   }
 }
