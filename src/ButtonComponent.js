@@ -16,6 +16,8 @@ const propTypes = {
   style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   progressSize: PropTypes.number,
   onPress: PropTypes.func,
+  onPressIn: PropTypes.func,
+  onPressOut: PropTypes.func,
 };
 
 const defaultProps = {
@@ -136,9 +138,9 @@ class ButtonComponent extends Component {
     return (
       <TouchableOpacity
         accessibilityTraits="button"
-        onPress={currentButtonState.onPress}
-        onPressIn={currentButtonState.onPressIn}
-        onPressOut={currentButtonState.onPressOut}
+        onPress={currentButtonState.onPress || this.props.onPress}
+        onPressIn={currentButtonState.onPressIn || this.props.onPressIn}
+        onPressOut={currentButtonState.onPressOut || this.props.onPressOut}
         activeOpacity={0.9}
         style={[styles.container, { width: buttonWidth, height: buttonHeight }, this.props.style]}
       >
