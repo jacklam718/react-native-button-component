@@ -119,7 +119,7 @@ class ButtonComponent extends Component {
           end={gradientEnd}
           colors={backgroundColors}
           collapsable={false}
-          style={[styles.button, shape, currentButtonState.buttonStyle]}
+          style={[styles.button, shape, this.props.buttonStyle, currentButtonState.buttonStyle]}
         >
           {this.renderButton({ textStyle: styles.text })}
         </AnimatedLinearGradient>
@@ -127,7 +127,7 @@ class ButtonComponent extends Component {
     } else {
       const border = type === 'border' && styles.border;
       content = (
-        <Animated.View style={[styles.button, border, shape, currentButtonState.buttonStyle]}>
+        <Animated.View style={[styles.button, border, shape, this.props.buttonStyle, currentButtonState.buttonStyle]}>
           {this.renderButton({ textStyle: styles.secondaryText })}
         </Animated.View>
       );
