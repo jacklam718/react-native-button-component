@@ -89,18 +89,18 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
   buttonState={this.state.uploadButtonState}
   states={{
     upload: {
-      onPress={() => {
+      onPress: () => {
         this.imageUploader.upload();
         this.state.setState({ uploadButtonState: 'uploading' });
-      }}
+      },
       image: require('upload-image.png'),
       text: 'Upload Image',
     },
     uploading: {
-      onPress={() => {
+      onPress: () => {
         this.imageUploader.cancelUpload();
         this.state.setState({ uploadButtonState: 'upload' });
-      }}
+      },
       spinner: true,
       text: 'Uploding Image...',
     },
@@ -141,10 +141,10 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
       backgroundColors: ['#4DC7A4', '#66D37A'],
       image: require('upload-image.png'),
       text: 'Upload Image',
-      onPress={() => {
+      onPress: () => {
         this.imageUploader.upload();
         this.state.setState({ uploadButtonState: 'uploading' });
-      }}
+      },
     },
     uploading: {
       gradientStart=[0.8, 1]
@@ -152,10 +152,10 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
       backgroundColors: ['#ff4949', '#fe6060'],
       spinner: true,
       text: 'Uploding Image...',
-      onPress={() => {
+      onPress: () => {
         this.imageUploader.cancelUpload();
         this.state.setState({ uploadButtonState: 'upload' });
-      }}
+      },
     },
   }}
 >
@@ -173,18 +173,18 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
     upload: {
       image: require('upload-image.png'),
       text: 'Upload Image',
-      onPress={() => {
+      onPress: () => {
         this.imageUploader.upload();
         this.state.setState({ uploadButtonState: 'uploading' });
-      }}
+      },
     },
     uploading: {
       spinner: true,
       text: 'Uploding Image...',
-      onPress={() => {
+      onPress: () => {
         this.imageUploader.cancelUpload();
         this.state.setState({ uploadButtonState: 'upload' });
-      }}
+      },
     },
   }}
 >
