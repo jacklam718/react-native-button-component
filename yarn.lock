@@ -1263,6 +1263,12 @@ react-native-circular-progress@^0.0.7:
   dependencies:
     art "^0.10.0"
 
+"react-native-circular-progress@github:jacklam718/react-native-circular-progress#v0.0.8":
+  version "0.0.8"
+  resolved "https://codeload.github.com/jacklam718/react-native-circular-progress/tar.gz/1f05129e188e166744ae8ee0455ba9a3ae744353"
+  dependencies:
+    art "^0.10.0"
+
 react-native-linear-gradient@^1.5.15:
   version "1.5.15"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-1.5.15.tgz#4413111934dc1d8f5e0572ca96e60b1a2cf41f4d"
