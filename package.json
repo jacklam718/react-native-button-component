@@ -36,8 +36,8 @@
     "babel-preset-react-native-stage-0": "^1.0.1",
     "lodash": "^4.17.2",
     "react-native-circular-progress": "github:jacklam718/react-native-circular-progress#v0.0.8",
-    "react-native-linear-gradient": "^1.5.15",
-    "react-native-spinkit": "^0.1.5"
+    "react-native-linear-gradient": "^2.0.0",
+    "react-native-spinkit": "^1.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

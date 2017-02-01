@@ -9,8 +9,8 @@ const propTypes = {
   height: PropTypes.number,
   type: PropTypes.string,
   shape: PropTypes.string,
-  gradientStart: PropTypes.array,
-  gradientEnd: PropTypes.array,
+  gradientStart: PropTypes.object,
+  gradientEnd: PropTypes.object,
   backgroundColors: PropTypes.array,
   buttonStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
@@ -22,8 +22,8 @@ const defaultProps = {
   type: 'primary',
   shape: 'round',
   backgroundColors: ['#4DC7A4', '#66D37A'],
-  gradientStart: [0.5, 1],
-  gradientEnd: [1, 1],
+  gradientStart: { x: 0.5, y: 1 },
+  gradientEnd: { x: 1, y: 1 },
   width: null,
   height: 50,
 };
@@ -46,7 +46,7 @@ class ButtonComponent extends Component {
     if (this.props.states) {
       const addedAnimtionConfigButtonStates = configButtonStatesAnimation(
         this.props.states,
-        this.props.height
+        this.props.height,
       );
       button = (
         <Button
