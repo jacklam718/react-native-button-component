@@ -22,9 +22,13 @@ So I recommend you should use CircleButton, RoundButton, RectangleButton, rather
 
 ## Installation
 1. `npm install --save react-native-button-component`
-
 2. `react-native link` or `rnpm link`
 
+## Third Party Packages
+##### This component used these packages:
+[react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
+
+[react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
 
 ## Some Simple Examples
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
