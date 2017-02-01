@@ -13,6 +13,7 @@
 | `shape` | `String` | `round` | | |
 | `gradientStart` | `Object` | `{x: 0.5, y: 1}` | | |
 | `gradientEnd` | `Object` | `{x: 1, y: 1}` | | |
+| `gradientLocations` | `Array` | `null` | example: [0,0.5,0.6] | |
 | `backgroundColors` | `Array` | `['#4DC7A4', '#66D37A']` | | |
 | `buttonStyle` | `Object, Number` | `['#4DC7A4', '#66D37A']` | | |
 

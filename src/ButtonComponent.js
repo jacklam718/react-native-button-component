@@ -11,6 +11,7 @@ const propTypes = {
   shape: PropTypes.string,
   gradientStart: PropTypes.object,
   gradientEnd: PropTypes.object,
+  gradientLocations: PropTypes.array,
   backgroundColors: PropTypes.array,
   buttonStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
@@ -26,6 +27,7 @@ const defaultProps = {
   gradientEnd: { x: 1, y: 1 },
   width: null,
   height: 50,
+  gradientLocations: null,
 };
 
 class ButtonComponent extends Component {
@@ -98,6 +100,9 @@ class ButtonComponent extends Component {
     const gradientEnd = currentButtonState.gradientEnd
       ? currentButtonState.gradientEnd
       : this.props.gradientEnd;
+    const gradientLocations = currentButtonState.gradientLocations
+      ? currentButtonState.gradientLocations
+      : this.props.gradientLocations;
     const backgroundColors = currentButtonState.backgroundColors || this.props.backgroundColors;
     const type = currentButtonState.type ? currentButtonState.type : this.props.type;
 
@@ -116,7 +121,7 @@ class ButtonComponent extends Component {
           start={gradientStart}
           end={gradientEnd}
           colors={backgroundColors}
-          collapsable={false}
+          locations={gradientLocations}
           style={[styles.button, shape, currentButtonState.buttonStyle]}
         >
           {this.renderButton({ textStyle: styles.text })}
