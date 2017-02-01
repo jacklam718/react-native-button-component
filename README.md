@@ -25,7 +25,6 @@ So I recommend you should use CircleButton, RoundButton, RectangleButton, rather
 
 2. `react-native link` or `rnpm link`
 
-3. Link ART library to your ReactNative project ([how to link a library?](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#content)). You'll find ReactART library in `node_modules/react-native/Libraries/ART/ART.xcodeproj`
 
 ## Some Simple Examples
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
