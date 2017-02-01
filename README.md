@@ -116,9 +116,9 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 <ButtonComponent
   type="primary"
   shape="rectangle",
-  backgroundColors: ['#4DC7A4', '#66D37A'],
-  gradientStart=[0.5, 1]
-  gradientEnd=[1, 1]
+  backgroundColors=['#4DC7A4', '#66D37A'],
+  gradientStart={{x: 0.5, y: 1}},
+  gradientEnd={{x: 1, y: 1}},
   height: 80,
   onPress={() => {}}
   image={require('button-image.png')}
@@ -134,8 +134,8 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 // You can use CircleButton, RoundButton, RectangleButton to instead ButtonComponent
 <ButtonComponent
   buttonState={this.state.uploadButtonState}
-  gradientStart=[0.5, 1]
-  gradientEnd=[1, 1]
+  gradientStart={{x: 0.5, y: 1}},
+  gradientEnd={{x: 1, y: 1}},
   states={{
     upload: {
       backgroundColors: ['#4DC7A4', '#66D37A'],
@@ -147,8 +147,8 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
       },
     },
     uploading: {
-      gradientStart=[0.8, 1]
-      gradientEnd=[1, 1]
+      gradientStart: {x: 0.8, y: 1},
+      gradientEnd: {x: 1, y: 1},
       backgroundColors: ['#ff4949', '#fe6060'],
       spinner: true,
       text: 'Uploding Image...',
@@ -166,9 +166,9 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 ```javascript
 <ButtonComponent
   buttonState={this.state.uploadButtonState}
-  gradientStart=[0.5, 1]
-  gradientEnd=[1, 1]
-  backgroundColors: ['#4DC7A4', '#66D37A'],
+  gradientStart={{x: 0.5, y: 1}},
+  gradientEnd={{x: 1, y: 1}},
+  backgroundColors=['#4DC7A4', '#66D37A'],
   states={{
     upload: {
       image: require('upload-image.png'),

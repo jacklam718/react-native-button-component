@@ -11,8 +11,8 @@
 | `Height` | `Number` | `50` | | |
 | `type` | `String` | `primary` | | |
 | `shape` | `String` | `round` | | |
-| `gradientStart` | `Array` | `[0.5, 1]` | | |
-| `gradientEnd` | `Array` | `[1, 1]` | | |
+| `gradientStart` | `Object` | `{x: 0.5, y: 1}` | | |
+| `gradientEnd` | `Object` | `{x: 1, y: 1}` | | |
 | `backgroundColors` | `Array` | `['#4DC7A4', '#66D37A']` | | |
 | `buttonStyle` | `Object, Number` | `['#4DC7A4', '#66D37A']` | | |
 
@@ -30,8 +30,8 @@
 | Height | Number | 50 | | |
 | type | String | primary | | |
 | shape | String | round | | |
-| gradientStart | Array | [0.5, 1] | | |
-| gradientEnd | Array | [1, 1] | | |
+| gradientStart | Object | {x: 0.5, y: 1} | | |
+| gradientEnd | Object | {x: 1, y: 1} | | |
 | backgroundColors | Array | ['#4DC7A4', '#66D37A'] | | | -->
 
 
@@ -58,8 +58,8 @@
 | `Height` | `Number` | `50` | | |
 | `type` | `String` | `primary` | | |
 | `shape` | `String` | `round` | | |
-| `gradientStart` | `Array` | `[0.5, 1]` | | |
-| `gradientEnd` | `Array` | `[1, 1]` | | |
+| `gradientStart` | `Object` | `{x: 0.5, y: 1}` | | |
+| `gradientEnd` | `Object` | `{x: 1, y: 1}` | | |
 | `backgroundColors` | `Array` | `['#4DC7A4', '#66D37A']` | | |
 | `buttonStyle` | `Object, Number` | | | |
 | `imageAnimConfig` | `Object` | | | |
