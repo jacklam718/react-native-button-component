@@ -28,7 +28,7 @@ So I recommend you should use CircleButton, RoundButton, RectangleButton, rather
 If you didn't see this item `libART.a` under the `Link Binary With Libraries` or you get this error `No component found for view with name "ARTSurfaceView"`
 Please open Xcode project and add `libART.a` under `Build Phases -> Link Binary With Libraries`
 
-The detailed steps:
+###### The detailed steps:
 1. Open Xcode project
 2. Build Phases -> Link Binary With Libraries
 3. Click the `+` button and Click `Add Other...`
