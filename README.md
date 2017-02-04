@@ -35,14 +35,6 @@ Please open Xcode project and add `libART.a` under `Build Phases -> Link Binary 
 4. Open with `node_modules/react-native/Libraries/ART/ART.xcodeproj`
 
 
-## Third Party React Native Components
-##### This component used these components:
-[react-native-circular-progress](https://github.com/jacklam718/react-native-circular-progress)
-
-[react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
-
-[react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
-
 ## Some Simple Examples
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
   One State Button
@@ -130,15 +122,15 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 #### Button with one state
 ```javascript
 <ButtonComponent
+  text="Button"
   type="primary"
-  shape="rectangle",
-  backgroundColors=['#4DC7A4', '#66D37A'],
-  gradientStart={{x: 0.5, y: 1}},
-  gradientEnd={{x: 1, y: 1}},
-  height: 80,
+  shape="rectangle"
+  backgroundColors=['#4DC7A4', '#66D37A']
+  gradientStart={{ x: 0.5, y: 1 }}
+  gradientEnd={{ x: 1, y: 1 }}
+  height={80}
   onPress={() => {}}
   image={require('button-image.png')}
-  text="Button"
 >
 </ButtonComponent>
 ```
@@ -150,24 +142,24 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 // You can use CircleButton, RoundButton, RectangleButton to instead ButtonComponent
 <ButtonComponent
   buttonState={this.state.uploadButtonState}
-  gradientStart={{x: 0.5, y: 1}},
-  gradientEnd={{x: 1, y: 1}},
+  gradientStart={{ x: 0.5, y: 1 }}
+  gradientEnd={{ x: 1, y: 1 }}
   states={{
     upload: {
+      text: 'Upload Image',
       backgroundColors: ['#4DC7A4', '#66D37A'],
       image: require('upload-image.png'),
-      text: 'Upload Image',
       onPress: () => {
         this.imageUploader.upload();
         this.state.setState({ uploadButtonState: 'uploading' });
       },
     },
     uploading: {
-      gradientStart: {x: 0.8, y: 1},
-      gradientEnd: {x: 1, y: 1},
+      text: 'Uploding Image...',
+      gradientStart: { x: 0.8, y: 1 },
+      gradientEnd: { x: 1, y: 1 },
       backgroundColors: ['#ff4949', '#fe6060'],
       spinner: true,
-      text: 'Uploding Image...',
       onPress: () => {
         this.imageUploader.cancelUpload();
         this.state.setState({ uploadButtonState: 'upload' });
@@ -182,21 +174,21 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 ```javascript
 <ButtonComponent
   buttonState={this.state.uploadButtonState}
-  gradientStart={{x: 0.5, y: 1}},
-  gradientEnd={{x: 1, y: 1}},
-  backgroundColors=['#4DC7A4', '#66D37A'],
+  gradientStart={{ x: 0.5, y: 1 }}
+  gradientEnd={{ x: 1, y: 1 }}
+  backgroundColors=['#4DC7A4', '#66D37A']
   states={{
     upload: {
-      image: require('upload-image.png'),
       text: 'Upload Image',
+      image: require('upload-image.png'),
       onPress: () => {
         this.imageUploader.upload();
         this.state.setState({ uploadButtonState: 'uploading' });
       },
     },
     uploading: {
-      spinner: true,
       text: 'Uploding Image...',
+      spinner: true,
       onPress: () => {
         this.imageUploader.cancelUpload();
         this.state.setState({ uploadButtonState: 'upload' });
