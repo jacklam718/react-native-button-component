@@ -24,8 +24,21 @@ So I recommend you should use CircleButton, RoundButton, RectangleButton, rather
 1. `npm install --save react-native-button-component`
 2. `react-native link` or `rnpm link`
 
-## Third Party Packages
-##### This component used these packages:
+##### Note
+If you didn't see this item `libART.a` under the `Link Binary With Libraries` or you get this error `No component found for view with name "ARTSurfaceView"`
+Please open Xcode project and add `libART.a` under `Build Phases -> Link Binary With Libraries`
+
+The detailed steps:
+1. Open Xcode project
+2. Build Phases -> Link Binary With Libraries
+3. Click the `+` button and Click `Add Other...`
+4. Open with `node_modules/react-native/Libraries/ART/ART.xcodeproj`
+
+
+## Third Party React Native Components
+##### This component used these components:
+[react-native-circular-progress](https://github.com/jacklam718/react-native-circular-progress)
+
 [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
 
 [react-native-spinkit](https://github.com/maxs15/react-native-spinkit)
