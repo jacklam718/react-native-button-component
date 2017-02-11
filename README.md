@@ -125,7 +125,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
   text="Button"
   type="primary"
   shape="rectangle"
-  backgroundColors=['#4DC7A4', '#66D37A']
+  backgroundColors={['#4DC7A4', '#66D37A']}
   gradientStart={{ x: 0.5, y: 1 }}
   gradientEnd={{ x: 1, y: 1 }}
   height={80}
@@ -176,7 +176,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
   buttonState={this.state.uploadButtonState}
   gradientStart={{ x: 0.5, y: 1 }}
   gradientEnd={{ x: 1, y: 1 }}
-  backgroundColors=['#4DC7A4', '#66D37A']
+  backgroundColors={['#4DC7A4', '#66D37A']}
   states={{
     upload: {
       text: 'Upload Image',
