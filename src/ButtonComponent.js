@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Button from './common/Button';
+import configButtonStatesAnimation from './configButtonStatesAnimation';
 
 const propTypes = {
   ...Button.propTypes,
@@ -87,27 +88,30 @@ class ButtonComponent extends Component {
     return button;
   }
 
+  getProp(propName) {
+    const currentButtonState = (this.props.buttonState && this.props.states)
+      ? this.props.states[this.props.buttonState]
+      : this.props;
+    const prop = currentButtonState[propName]
+      ? currentButtonState[propName]
+      : this.props[propName];
+
+    return prop;
+  }
+
   render() {
     let content;
     let shape;
 
-    const currentButtonState = (this.props.buttonState && this.props.states)
-      ? this.props.states[this.props.buttonState]
-      : this.props;
-    const gradientStart = currentButtonState.gradientStart
-      ? currentButtonState.gradientStart
-      : this.props.gradientStart;
-    const gradientEnd = currentButtonState.gradientEnd
-      ? currentButtonState.gradientEnd
-      : this.props.gradientEnd;
-    const gradientLocations = currentButtonState.gradientLocations
-      ? currentButtonState.gradientLocations
-      : this.props.gradientLocations;
-    const backgroundColors = currentButtonState.backgroundColors || this.props.backgroundColors;
-    const type = currentButtonState.type ? currentButtonState.type : this.props.type;
-
-    const buttonHeight = currentButtonState.height ? currentButtonState.height : this.props.height;
-    const buttonWidth = currentButtonState.width ? currentButtonState.width : this.props.width;
+    const onPress = this.getProp('onPress');
+    const buttonStyle = this.getProp('buttonStyle');
+    const gradientStart = this.getProp('gradientStart');
+    const gradientEnd = this.getProp('gradientEnd');
+    const gradientLocations = this.getProp('gradientLocations');
+    const backgroundColors = this.getProp('backgroundColors');
+    const type = this.getProp('type');
+    const buttonHeight = this.getProp('buttonHeight');
+    const buttonWidth = this.getProp('buttonWidth');
 
     if (this.props.shape === 'round' || this.props.shape === 'circle') {
       shape = {
@@ -122,7 +126,7 @@ class ButtonComponent extends Component {
           end={gradientEnd}
           colors={backgroundColors}
           locations={gradientLocations}
-          style={[styles.button, shape, currentButtonState.buttonStyle]}
+          style={[styles.button, shape, buttonStyle]}
         >
           {this.renderButton({ textStyle: styles.text })}
         </LinearGradient>
@@ -130,7 +134,7 @@ class ButtonComponent extends Component {
     } else {
       const border = type === 'border' && styles.border;
       content = (
-        <View style={[styles.button, border, shape, currentButtonState.buttonStyle]}>
+        <View style={[styles.button, border, shape, buttonStyle]}>
           {this.renderButton({ textStyle: styles.secondaryText })}
         </View>
       );
@@ -139,7 +143,7 @@ class ButtonComponent extends Component {
     return (
       <TouchableOpacity
         accessibilityTraits="button"
-        onPress={currentButtonState.onPress}
+        onPress={onPress}
         activeOpacity={0.9}
         style={[styles.container, { width: buttonWidth, height: buttonHeight }, this.props.style]}
       >
@@ -147,77 +151,6 @@ class ButtonComponent extends Component {
       </TouchableOpacity>
     );
   }
-}
-
-function configButtonStatesAnimation(buttonsStates, height) {
-  const addedAnimtionConfigButtonStates = {};
-  const stateNames = Object.keys(buttonsStates);
-  for (let i = 0; i < stateNames.length; i++) {
-    const stateName = stateNames[i];
-    const buttonState = buttonsStates[stateName];
-    const textAnimConfig = {};
-    const imageAnimConfig = {};
-    const progressAnimConfig = {};
-
-    // config the text animations
-    {
-      const opacity = { inputRange: [], outputRange: [] };
-      const translateY = { inputRange: [], outputRange: [] };
-      if (i === 0) {
-        opacity.inputRange.push(0, 1);
-        opacity.outputRange.push(1, 0);
-        translateY.inputRange.push(0, 1);
-        translateY.outputRange.push(0, height - 10);
-      } else {
-        opacity.inputRange.push(0, 1);
-        opacity.outputRange.push(0, 1);
-        translateY.inputRange.push(0, 1);
-        translateY.outputRange.push((0 - height * i), (0 - height * (i - 1)));
-      }
-      textAnimConfig.opacity = opacity;
-      textAnimConfig.transform = [{ translateY }];
-    }
-
-    // config the image animations
-    {
-      const opacity = { inputRange: [], outputRange: [] };
-      const translateY = { inputRange: [], outputRange: [] };
-      if (i === 0) {
-        opacity.inputRange.push(0, 1);
-        opacity.outputRange.push(1, 0);
-        translateY.inputRange.push(0, 1);
-        translateY.outputRange.push(0, (height - 10) * 2);
-      } else {
-        opacity.inputRange.push(0, 1);
-        opacity.outputRange.push(0, 1);
-        translateY.inputRange.push(0, 1);
-        translateY.outputRange.push((0 - (height * 2) * i), (0 - (height * 2) * (i - 1)));
-      }
-      imageAnimConfig.opacity = opacity;
-      imageAnimConfig.transform = [{ translateY }];
-    }
-
-    // config the progress animations
-    {
-      const opacity = { inputRange: [], outputRange: [] };
-      const translateY = { inputRange: [], outputRange: [] };
-      opacity.inputRange.push(0, 1);
-      opacity.outputRange.push(0, 1);
-      translateY.inputRange.push(0, 0);
-      translateY.outputRange.push((0 - (height * 2) * i), (0 - (height * 2) * (i - 1)));
-      progressAnimConfig.opacity = opacity;
-      progressAnimConfig.transform = [{ translateY }];
-    }
-
-    addedAnimtionConfigButtonStates[stateName] = {
-      textAnimConfig,
-      imageAnimConfig,
-      progressAnimConfig,
-      ...buttonState,
-    };
-  }
-
-  return addedAnimtionConfigButtonStates;
 }
 
 const styles = StyleSheet.create({
