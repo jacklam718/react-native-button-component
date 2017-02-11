@@ -59,15 +59,10 @@ function configButtonStatesAnimation(buttonsStates, height) {
     const stateName = stateNames[i];
     const buttonState = buttonsStates[stateName];
 
-    // config the text animations
-    const buttonTextAnimConfig = configButtonTextAnimation(height, i);
-    const buttonImageAnimConfig = configButtonImageAnimation(height, i);
-    const buttonProgressAnimConfig = configButtonProgressAnimation(height, i);
-
     addedAnimtionConfigButtonStates[stateName] = {
-      textAnimConfig: buttonTextAnimConfig,
-      imageAnimConfig: buttonImageAnimConfig,
-      progressAnimConfig: buttonProgressAnimConfig,
+      textAnimConfig: configButtonTextAnimation(height, i),
+      imageAnimConfig: configButtonImageAnimation(height, i),
+      progressAnimConfig: configButtonProgressAnimation(height, i),
       ...buttonState,
     };
   }
