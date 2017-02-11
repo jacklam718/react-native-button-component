@@ -42,7 +42,7 @@ class Button extends Component {
       animation.opacity = this.state.animated.interpolate(opacity);
     }
     if (transform) {
-      animation.transform = _.map(transform, directives => {
+      animation.transform = _.map(transform, (directives) => {
         const interpolates = {};
         _.forEach(directives, (directive, directiveName) => {
           interpolates[directiveName] = this.state.animated.interpolate(directive);
@@ -54,7 +54,7 @@ class Button extends Component {
     return animation;
   }
 
-  render() {
+  renderContent() {
     let content;
     // create inner buttons for each button states
     if (this.props.states) {
@@ -82,9 +82,13 @@ class Button extends Component {
       );
     }
 
+    return content;
+  }
+
+  render() {
     return (
       <View style={{ flex: 1 }}>
-        {content}
+        {this.renderContent()}
       </View>
     );
   }

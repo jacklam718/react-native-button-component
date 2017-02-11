@@ -3,6 +3,54 @@ import { View, Text, Animated, StyleSheet, Image } from 'react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import Spinner from 'react-native-spinkit';
 
+const styles = StyleSheet.create({
+  content: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  progressContent: {
+    flexDirection: 'column',
+  },
+  spinnerContent: {
+    flexDirection: 'column',
+  },
+  progress: {
+    alignItems: 'center',
+  },
+  image: {
+    marginRight: 12,
+  },
+  imageCenter: {
+    marginLeft: 0,
+    marginRight: 0,
+    marginTop: 0,
+    marginBottom: 0,
+  },
+  spinner: {
+  },
+  text: {
+    letterSpacing: 10,
+    fontSize: 12,
+    flexDirection: 'row',
+    color: 'white',
+  },
+  textInsideProgress: {
+    top: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+});
+
 const propTypes = {
   imageAnim: PropTypes.object,
   textAnim: PropTypes.object,
@@ -60,7 +108,7 @@ class InnerButton extends Component {
       );
     }
 
-    if (this.props.text && !this.props.progress || !this.props.textInsideProgress) {
+    if ((this.props.text && !this.props.progress) || !this.props.textInsideProgress) {
       text = (
         <Animated.Text style={[styles.text, this.props.textStyle, this.props.textAnim]}>
           {this.props.text}
@@ -138,53 +186,5 @@ class InnerButton extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  content: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    right: 0,
-    bottom: 0,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  progressContent: {
-    flexDirection: 'column',
-  },
-  spinnerContent: {
-    flexDirection: 'column',
-  },
-  progress: {
-    alignItems: 'center',
-  },
-  image: {
-    marginRight: 12,
-  },
-  imageCenter: {
-    marginLeft: 0,
-    marginRight: 0,
-    marginTop: 0,
-    marginBottom: 0,
-  },
-  spinner: {
-  },
-  text: {
-    letterSpacing: 10,
-    fontSize: 12,
-    flexDirection: 'row',
-    color: 'white',
-  },
-  textInsideProgress: {
-    top: 0,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    left: 0,
-    right: 0,
-    bottom: 0,
-  },
-});
 
 export default InnerButton;
