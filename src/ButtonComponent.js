@@ -4,6 +4,45 @@ import LinearGradient from 'react-native-linear-gradient';
 import Button from './common/Button';
 import configButtonStatesAnimation from './configButtonStatesAnimation';
 
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    overflow: 'hidden',
+  },
+  button: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    // paddingHorizontal: 40,
+  },
+  border: {
+    borderWidth: 1,
+    borderColor: '#7F91A7',
+  },
+  content: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    marginRight: 12,
+  },
+  text: {
+    letterSpacing: 1,
+    fontSize: 12,
+    color: 'white',
+  },
+  secondaryText: {
+    letterSpacing: 1,
+    fontSize: 12,
+    color: '#7F91A7',
+  },
+});
+
 const propTypes = {
   ...Button.propTypes,
   width: PropTypes.number,
@@ -41,6 +80,17 @@ class ButtonComponent extends Component {
     if (this.props.states && this.props.buttonState !== nextProps.buttonState) return true;
     if (this.props.states && this.props.states[this.props.buttonState].progressFill) return true;
     return false;
+  }
+
+  getProp(propName) {
+    const currentButtonState = (this.props.buttonState && this.props.states)
+      ? this.props.states[this.props.buttonState]
+      : this.props;
+    const prop = currentButtonState[propName]
+      ? currentButtonState[propName]
+      : this.props[propName];
+
+    return prop;
   }
 
   renderButton({ textStyle = styles.text, imageStyle = styles.image }) {
@@ -86,17 +136,6 @@ class ButtonComponent extends Component {
     }
 
     return button;
-  }
-
-  getProp(propName) {
-    const currentButtonState = (this.props.buttonState && this.props.states)
-      ? this.props.states[this.props.buttonState]
-      : this.props;
-    const prop = currentButtonState[propName]
-      ? currentButtonState[propName]
-      : this.props[propName];
-
-    return prop;
   }
 
   render() {
@@ -152,44 +191,5 @@ class ButtonComponent extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    overflow: 'hidden',
-  },
-  button: {
-    flex: 1,
-    backgroundColor: 'transparent',
-    // paddingHorizontal: 40,
-  },
-  border: {
-    borderWidth: 1,
-    borderColor: '#7F91A7',
-  },
-  content: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    right: 0,
-    bottom: 0,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  image: {
-    marginRight: 12,
-  },
-  text: {
-    letterSpacing: 1,
-    fontSize: 12,
-    color: 'white',
-  },
-  secondaryText: {
-    letterSpacing: 1,
-    fontSize: 12,
-    color: '#7F91A7',
-  },
-});
 
 export default ButtonComponent;
