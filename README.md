@@ -94,12 +94,12 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 
 // You can use CircleButton, RoundButton, RectangleButton to instead ButtonComponent
 <ButtonComponent
-  buttonState={this.state.uploadButtonState}
+  buttonState={this.state.buttonState} // "upload" or "uploading"
   states={{
     upload: {
       onPress: () => {
         this.imageUploader.upload();
-        this.state.setState({ uploadButtonState: 'uploading' });
+        this.state.setState({ buttonState: 'uploading' });
       },
       image: require('upload-image.png'),
       text: 'Upload Image',
@@ -107,7 +107,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
     uploading: {
       onPress: () => {
         this.imageUploader.cancelUpload();
-        this.state.setState({ uploadButtonState: 'upload' });
+        this.state.setState({ buttonState: 'upload' });
       },
       spinner: true,
       text: 'Uploding Image...',
@@ -141,7 +141,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 
 // You can use CircleButton, RoundButton, RectangleButton to instead ButtonComponent
 <ButtonComponent
-  buttonState={this.state.uploadButtonState}
+  buttonState={this.state.buttonState} // "upload" or "uploading"
   gradientStart={{ x: 0.5, y: 1 }}
   gradientEnd={{ x: 1, y: 1 }}
   states={{
@@ -151,7 +151,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
       image: require('upload-image.png'),
       onPress: () => {
         this.imageUploader.upload();
-        this.state.setState({ uploadButtonState: 'uploading' });
+        this.state.setState({ buttonState: 'uploading' });
       },
     },
     uploading: {
@@ -162,7 +162,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
       spinner: true,
       onPress: () => {
         this.imageUploader.cancelUpload();
-        this.state.setState({ uploadButtonState: 'upload' });
+        this.state.setState({ buttonState: 'upload' });
       },
     },
   }}
@@ -173,7 +173,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
 #### Button with multiple states - one config for different states
 ```javascript
 <ButtonComponent
-  buttonState={this.state.uploadButtonState}
+  buttonState={this.state.buttonState} // "upload" or "uploading"
   gradientStart={{ x: 0.5, y: 1 }}
   gradientEnd={{ x: 1, y: 1 }}
   backgroundColors={['#4DC7A4', '#66D37A']}
@@ -183,7 +183,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
       image: require('upload-image.png'),
       onPress: () => {
         this.imageUploader.upload();
-        this.state.setState({ uploadButtonState: 'uploading' });
+        this.state.setState({ buttonState: 'uploading' });
       },
     },
     uploading: {
@@ -191,7 +191,7 @@ import ButtonComponent, { CircleButton, RoundButton, RectangleButton } from 'rea
       spinner: true,
       onPress: () => {
         this.imageUploader.cancelUpload();
-        this.state.setState({ uploadButtonState: 'upload' });
+        this.state.setState({ buttonState: 'upload' });
       },
     },
   }}
