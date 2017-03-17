@@ -27,6 +27,11 @@
   "author": "jacklam <jacklam718@gmail.com> (https://github.com/jacklam718)",
   "license": "MIT",
   "homepage": "https://github.com/jacklam718/react-native-button-component/blob/master/README.md",
+  "rnpm": {
+    "commands": {
+      "postlink": "node ./node_modules/react-native-button-component/scripts/link.js"
+    }
+  },
   "dependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "lodash": "^4.17.2",
