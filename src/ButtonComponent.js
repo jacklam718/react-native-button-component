@@ -70,7 +70,7 @@ const defaultProps = {
   gradientLocations: null,
 };
 
-class ButtonComponent extends Component {
+export class ButtonComponent extends Component {
   static propTypes = propTypes;
   static defaultProps = defaultProps;
 
@@ -191,5 +191,3 @@ class ButtonComponent extends Component {
     );
   }
 }
-
-export default ButtonComponent;

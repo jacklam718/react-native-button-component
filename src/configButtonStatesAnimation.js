@@ -1,4 +1,4 @@
-function configButtonTextAnimation(height, index) {
+const configButtonTextAnimation = (height, index) => {
   const textAnimConfig = {};
   const opacity = { inputRange: [], outputRange: [] };
   const translateY = { inputRange: [], outputRange: [] };
@@ -19,7 +19,7 @@ function configButtonTextAnimation(height, index) {
   return textAnimConfig;
 }
 
-function configButtonImageAnimation(height, index) {
+const configButtonImageAnimation = (height, index) => {
   const imageAnimConfig = {};
   const opacity = { inputRange: [], outputRange: [] };
   const translateY = { inputRange: [], outputRange: [] };
@@ -39,7 +39,7 @@ function configButtonImageAnimation(height, index) {
   return imageAnimConfig;
 }
 
-function configButtonProgressAnimation(height, index) {
+const configButtonProgressAnimation = (height, index) => {
   const progressAnimConfig = {};
   const opacity = { inputRange: [], outputRange: [] };
   const translateY = { inputRange: [], outputRange: [] };
@@ -52,7 +52,7 @@ function configButtonProgressAnimation(height, index) {
   return progressAnimConfig;
 }
 
-function configButtonStatesAnimation(buttonsStates, height) {
+const configButtonStatesAnimation = (buttonsStates, height) => {
   const addedAnimtionConfigButtonStates = {};
   const stateNames = Object.keys(buttonsStates);
   for (let i = 0; i < stateNames.length; i += 1) {

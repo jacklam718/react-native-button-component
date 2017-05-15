@@ -87,7 +87,7 @@ const defaultProps = {
   spinnerColor: '#ffffff',
 };
 
-class InnerButton extends Component {
+export class InnerButton extends Component {
   static propTypes = propTypes;
   static defaultProps = defaultProps;
 
@@ -186,5 +186,3 @@ class InnerButton extends Component {
     );
   }
 }
-
-export default InnerButton;

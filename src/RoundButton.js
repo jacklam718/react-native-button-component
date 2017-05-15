@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonComponent from './ButtonComponent';
 
-export default function RoundButton(props) {
+export const RoundButton = (props) => {
   const progressSize = props.height / 2;
 
   return (

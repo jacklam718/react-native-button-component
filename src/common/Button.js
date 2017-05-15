@@ -9,7 +9,7 @@ const propTypes = {
   buttonState: PropTypes.string,
 };
 
-class Button extends Component {
+export class Button extends Component {
   static propTypes = propTypes;
 
   constructor(props) {
@@ -93,5 +93,3 @@ class Button extends Component {
     );
   }
 }
-
-export default Button;
