@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Button from './common/Button';
+import { Button } from './common/Button';
 import configButtonStatesAnimation from './configButtonStatesAnimation';
 
 const styles = StyleSheet.create({

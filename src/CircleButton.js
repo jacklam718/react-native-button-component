@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ButtonComponent from './ButtonComponent';
+import { ButtonComponent } from './ButtonComponent';
 
 export const CircleButton = (props) => {
   const buttonSize = props.size;

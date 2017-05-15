@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { View, Animated } from 'react-native';
 import _ from 'lodash';
-import InnerButton from './InnerButton';
+import { InnerButton } from './InnerButton';
 
 const propTypes = {
   ...InnerButton.propTypes,

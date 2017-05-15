@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonComponent from './ButtonComponent';
+import { ButtonComponent } from './ButtonComponent';
 
 export const RectangleButton = (props) => {
   const progressSize = props.height / 2;
