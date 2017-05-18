@@ -56,7 +56,7 @@ const propTypes = {
   gradientLocations: PropTypes.array,
   backgroundColors: PropTypes.array,
   buttonStyle: View.propTypes.style,
-  style: TouchableOpacity.propTypes.style,
+  style: View.propTypes.style,
   progressSize: PropTypes.number,
   onPress: PropTypes.func,
 };
