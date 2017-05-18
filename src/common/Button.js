@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { PropTypes } from 'prop-types'
 import { View, Animated } from 'react-native';
 import _ from 'lodash';
-import InnerButton from './InnerButton';
+import { InnerButton } from './InnerButton';
 
 const propTypes = {
   ...InnerButton.propTypes,
@@ -9,7 +10,7 @@ const propTypes = {
   buttonState: PropTypes.string,
 };
 
-class Button extends Component {
+export class Button extends Component {
   static propTypes = propTypes;
 
   constructor(props) {
@@ -25,14 +26,6 @@ class Button extends Component {
       const toValue = Object.keys(this.props.states).indexOf(nextProps.buttonState);
       Animated.spring(this.state.animated, { toValue }).start();
     }
-  }
-
-  shouldComponentUpdate(nextProps) {
-    const { states, buttonState } = nextProps;
-    if (states) {
-      return !!states[buttonState].progress;
-    }
-    return true;
   }
 
   createAnimation({ opacity, transform }) {
@@ -93,5 +86,3 @@ class Button extends Component {
     );
   }
 }
-
-export default Button;

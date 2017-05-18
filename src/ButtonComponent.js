@@ -1,8 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import Button from './common/Button';
+import { Button } from './common/Button';
 import configButtonStatesAnimation from './configButtonStatesAnimation';
+import _ from 'lodash'
 
 const styles = StyleSheet.create({
   container: {
@@ -53,8 +55,8 @@ const propTypes = {
   gradientEnd: PropTypes.object,
   gradientLocations: PropTypes.array,
   backgroundColors: PropTypes.array,
-  buttonStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
-  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  buttonStyle: View.propTypes.style,
+  style: View.propTypes.style,
   progressSize: PropTypes.number,
   onPress: PropTypes.func,
 };
@@ -70,7 +72,7 @@ const defaultProps = {
   gradientLocations: null,
 };
 
-class ButtonComponent extends Component {
+export class ButtonComponent extends Component {
   static propTypes = propTypes;
   static defaultProps = defaultProps;
 
@@ -78,7 +80,7 @@ class ButtonComponent extends Component {
     if (this.props.image !== nextProps.image) return true;
     if (this.props.text !== nextProps.text) return true;
     if (this.props.states && this.props.buttonState !== nextProps.buttonState) return true;
-    if (this.props.states && this.props.states[this.props.buttonState].progressFill) return true;
+    if (nextProps.states && !_(nextProps.states).isEqual(this.props.states)) return true;
     return false;
   }
 
@@ -191,5 +193,3 @@ class ButtonComponent extends Component {
     );
   }
 }
-
-export default ButtonComponent;

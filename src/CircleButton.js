@@ -1,7 +1,8 @@
-import React, { PropTypes } from 'react';
-import ButtonComponent from './ButtonComponent';
+import React from 'react';
+import PropTypes from 'prop-types'
+import { ButtonComponent } from './ButtonComponent';
 
-export default function CircleButton(props) {
+export const CircleButton = (props) => {
   const buttonSize = props.size;
   const progressSize = buttonSize;
   const textInsideProgress = props.states[props.buttonState].progress;
