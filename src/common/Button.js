@@ -27,14 +27,6 @@ export class Button extends Component {
     }
   }
 
-  shouldComponentUpdate(nextProps) {
-    const { states, buttonState } = nextProps;
-    if (states) {
-      return !!states[buttonState].progress;
-    }
-    return true;
-  }
-
   createAnimation({ opacity, transform }) {
     const animation = {};
 

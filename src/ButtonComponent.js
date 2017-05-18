@@ -3,6 +3,7 @@ import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common/Button';
 import configButtonStatesAnimation from './configButtonStatesAnimation';
+import _ from 'lodash'
 
 const styles = StyleSheet.create({
   container: {
@@ -78,7 +79,7 @@ export class ButtonComponent extends Component {
     if (this.props.image !== nextProps.image) return true;
     if (this.props.text !== nextProps.text) return true;
     if (this.props.states && this.props.buttonState !== nextProps.buttonState) return true;
-    if (this.props.states && this.props.states[this.props.buttonState].progressFill) return true;
+    if (nextProps.states && !_(nextProps.states).isEqual(this.props.states)) return true;
     return false;
   }
 
