@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button } from './common/Button';
@@ -54,8 +55,8 @@ const propTypes = {
   gradientEnd: PropTypes.object,
   gradientLocations: PropTypes.array,
   backgroundColors: PropTypes.array,
-  buttonStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
-  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  buttonStyle: View.propTypes.style,
+  style: TouchableOpacity.propTypes.style,
   progressSize: PropTypes.number,
   onPress: PropTypes.func,
 };
