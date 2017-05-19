@@ -33,7 +33,8 @@ Please open Xcode project and add `libART.a` under `Build Phases -> Link Binary 
 2. Build Phases -> Link Binary With Libraries
 3. Click the `+` button and Click `Add Other...`
 4. Open with `node_modules/react-native/Libraries/ART/ART.xcodeproj`
-
+5. Click the `+` and select the `libART.a` and click `Add`
+<img src="https://jacklam718.github.io/react-native-button-component/build/video/link-libART.gif" width="650" />
 
 ## Some Simple Examples
 <a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
