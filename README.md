@@ -37,23 +37,23 @@ Please open Xcode project and add `libART.a` under `Build Phases -> Link Binary 
 <img src="https://jacklam718.github.io/react-native-button-component/build/video/link-libART.gif" width="650" />
 
 ## Some Simple Examples
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/OneStateButtons.js" target="_blank">
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/button-example/js/containers/OneStateButtons.js" target="_blank">
   One State Button
 </a>
 <br>
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/MultipleStatesButtons.js" target="_blank">
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/button-example/js/containers/MultipleStatesButtons.js" target="_blank">
   Multiple States Button
 </a>
 <br>
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/SpinnerButtons.js" target="_blank">
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/button-example/js/containers/SpinnerButtons.js" target="_blank">
   Spinner Button
 </a>
 <br>
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/ProgressButtons.js" target="_blank">
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/button-example/js/containers/ProgressButtons.js" target="_blank">
   Progress Button
 </a>
 <br>
-<a href="https://github.com/jacklam718/react-native-button-component/blob/master/example/ButtonComponentExample/js/containers/CircleButtons.js" target="_blank">
+<a href="https://github.com/jacklam718/react-native-button-component/blob/master/button-example/js/containers/CircleButtons.js" target="_blank">
   Circle Button
 </a>
 
