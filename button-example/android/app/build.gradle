@@ -1,6 +1,11 @@
 apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Name of the font files you want to copy
+]
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets

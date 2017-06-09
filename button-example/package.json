@@ -11,7 +11,7 @@
     "react-native": "0.44.0",
     "react-native-button-component": "^0.1.17",
     "react-native-deprecated-custom-components": "^0.1.0",
-    "react-native-vector-icons": "^4.1.1"
+    "react-native-vector-icons": "^4.2.0"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
