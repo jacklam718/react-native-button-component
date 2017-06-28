@@ -12,8 +12,8 @@ const propTypes = {
   gradientStart: PropTypes.object,
   gradientEnd: PropTypes.object,
   backgroundColors: PropTypes.array,
-  buttonStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
-  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  buttonStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
   progressSize: PropTypes.number,
   onPress: PropTypes.func,
 };
