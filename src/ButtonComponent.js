@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Animated } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Button from './common/Button';
 
@@ -16,6 +16,8 @@ const propTypes = {
   style: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
   progressSize: PropTypes.number,
   onPress: PropTypes.func,
+  onPressIn: PropTypes.func,
+  onPressOut: PropTypes.func,
 };
 
 const defaultProps = {
@@ -27,6 +29,8 @@ const defaultProps = {
   width: null,
   height: 50,
 };
+
+const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
 
 class ButtonComponent extends Component {
   static propTypes = propTypes;
@@ -112,29 +116,31 @@ class ButtonComponent extends Component {
 
     if (type === 'primary') {
       content = (
-        <LinearGradient
+        <AnimatedLinearGradient
           start={gradientStart}
           end={gradientEnd}
           colors={backgroundColors}
           collapsable={false}
-          style={[styles.button, shape, currentButtonState.buttonStyle]}
+          style={[styles.button, shape, this.props.buttonStyle, currentButtonState.buttonStyle]}
         >
           {this.renderButton({ textStyle: styles.text })}
-        </LinearGradient>
+        </AnimatedLinearGradient>
       );
     } else {
       const border = type === 'border' && styles.border;
       content = (
-        <View style={[styles.button, border, shape, currentButtonState.buttonStyle]}>
+        <Animated.View style={[styles.button, border, shape, this.props.buttonStyle, currentButtonState.buttonStyle]}>
           {this.renderButton({ textStyle: styles.secondaryText })}
-        </View>
+        </Animated.View>
       );
     }
 
     return (
       <TouchableOpacity
         accessibilityTraits="button"
-        onPress={currentButtonState.onPress}
+        onPress={currentButtonState.onPress || this.props.onPress}
+        onPressIn={currentButtonState.onPressIn || this.props.onPressIn}
+        onPressOut={currentButtonState.onPressOut || this.props.onPressOut}
         activeOpacity={0.9}
         style={[styles.container, { width: buttonWidth, height: buttonHeight }, this.props.style]}
       >
