@@ -2,7 +2,11 @@
   "name": "react-native-button-component",
   "version": "0.1.19",
   "description": "A Beautiful, Customizable React Native Button component for iOS & Android",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && babel src/ -d dist/"
+  },
   "directories": {
     "doc": "docs",
     "example": "example"
