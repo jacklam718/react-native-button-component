@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, Text, Animated, StyleSheet, Image } from 'react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import Spinner from 'react-native-spinkit';
