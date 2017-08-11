@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
-    "react-native-button-component": "..",
+    "react-native-button-component": "file:../",
     "react-native-deprecated-custom-components": "^0.1.1",
     "react-native-vector-icons": "^4.3.0"
   },
