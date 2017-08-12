@@ -18,6 +18,7 @@
   "globals": {
     "require": false,
     "it": true,
-    "expect": true
+    "expect": true,
+    "describe": true
   }
 }

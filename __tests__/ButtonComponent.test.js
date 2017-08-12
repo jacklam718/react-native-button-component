@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import 'react-native';
 import React from 'react';
 import ButtonComponent from '../src';
 

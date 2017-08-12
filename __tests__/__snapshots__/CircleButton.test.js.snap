@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Circle Button renders CircleButton correctly with multi states 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits="button"
+  accessible={true}
+  collapsable={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "height": 100,
+      "opacity": 1,
+      "overflow": "hidden",
+      "width": 100,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <BVLinearGradient
+    collapsable={false}
+    colors={
+      Array [
+        4283287460,
+        4284928890,
+      ]
+    }
+    end={
+      Object {
+        "x": 1,
+        "y": 1,
+      }
+    }
+    locations={null}
+    start={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+        },
+        Object {
+          "borderRadius": 50,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            null,
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          collapsable={undefined}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "flexDirection": "row",
+              "fontSize": 12,
+              "letterSpacing": 1,
+              "opacity": 1,
+              "transform": Array [
+                Object {
+                  "translateY": 0,
+                },
+              ],
+            }
+          }
+        >
+          State 1
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            null,
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          collapsable={undefined}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "flexDirection": "row",
+              "fontSize": 12,
+              "letterSpacing": 1,
+              "opacity": 0,
+              "transform": Array [
+                Object {
+                  "translateY": -100,
+                },
+              ],
+            }
+          }
+        >
+          State 2
+        </Text>
+      </View>
+    </View>
+  </BVLinearGradient>
+</View>
+`;
+
+exports[`Circle Button renders CircleButton correctly with one state 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits="button"
+  accessible={true}
+  collapsable={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "height": 100,
+      "opacity": 1,
+      "overflow": "hidden",
+      "width": 100,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <BVLinearGradient
+    collapsable={false}
+    colors={
+      Array [
+        4283287460,
+        4284928890,
+      ]
+    }
+    end={
+      Object {
+        "x": 1,
+        "y": 1,
+      }
+    }
+    locations={null}
+    start={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+        },
+        Object {
+          "borderRadius": 50,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            null,
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          collapsable={undefined}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "white",
+              "flexDirection": "row",
+              "fontSize": 12,
+              "letterSpacing": 1,
+            }
+          }
+        >
+          Circle Button
+        </Text>
+      </View>
+    </View>
+  </BVLinearGradient>
+</View>
+`;

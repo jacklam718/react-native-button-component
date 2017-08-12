@@ -5,7 +5,9 @@ import ButtonComponent from './ButtonComponent';
 export default function CircleButton(props) {
   const buttonSize = props.size;
   const progressSize = buttonSize;
-  const textInsideProgress = props.states[props.buttonState].progress;
+  const textInsideProgress = props.states
+    ? props.states[props.buttonState].progress
+    : null;
 
   return (
     <ButtonComponent
