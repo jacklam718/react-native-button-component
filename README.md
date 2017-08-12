@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/jacklam718/react-native-button-component.svg?branch=master)](https://travis-ci.org/jacklam718/react-native-button-component)
+[![npm](https://img.shields.io/npm/v/react-native-button-component.svg)]()
+[![npm](https://img.shields.io/npm/dm/react-native-button-component.svg)]()
+
+
 ## React Native Button component
 
 React Native Button component for iOS & Android.
