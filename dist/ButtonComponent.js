@@ -1,4 +1,4 @@
-Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _react=require('react');var _react2=_interopRequireDefault(_react);
+Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName='src/ButtonComponent.js';var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _react=require('react');var _react2=_interopRequireDefault(_react);
 var _propTypes=require('prop-types');var _propTypes2=_interopRequireDefault(_propTypes);
 var _reactNative=require('react-native');
 var _reactNativeLinearGradient=require('react-native-linear-gradient');var _reactNativeLinearGradient2=_interopRequireDefault(_reactNativeLinearGradient);
@@ -69,7 +69,7 @@ progressWidth:this.props.progressWidth,
 progressTintColor:this.props.progressTintColor,
 progressBackgroundColor:this.props.progressBackgroundColor,
 progressStyle:this.props.progressStyle,
-textInsideProgress:this.props.textInsideProgress});
+textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:53}});
 
 
 }else{
@@ -78,7 +78,7 @@ _react2.default.createElement(_Button2.default,{
 textStyle:this.props.textStyle||textStyle,
 imageStyle:this.props.imageStyle||imageStyle,
 text:this.props.text,
-image:this.props.image});
+image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:77}});
 
 
 }
@@ -118,7 +118,7 @@ start:gradientStart,
 end:gradientEnd,
 colors:backgroundColors,
 collapsable:false,
-style:[styles.button,shape,currentButtonState.buttonStyle]},
+style:[styles.button,shape,currentButtonState.buttonStyle],__source:{fileName:_jsxFileName,lineNumber:116}},
 
 this.renderButton({textStyle:styles.text}));
 
@@ -126,7 +126,7 @@ this.renderButton({textStyle:styles.text}));
 }else{
 var border=type==='border'&&styles.border;
 content=
-_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shape,currentButtonState.buttonStyle]},
+_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shape,currentButtonState.buttonStyle],__source:{fileName:_jsxFileName,lineNumber:129}},
 this.renderButton({textStyle:styles.secondaryText}));
 
 
@@ -137,7 +137,7 @@ _react2.default.createElement(_reactNative.TouchableOpacity,{
 accessibilityTraits:'button',
 onPress:currentButtonState.onPress,
 activeOpacity:0.9,
-style:[styles.container,{width:buttonWidth,height:buttonHeight},this.props.style]},
+style:[styles.container,{width:buttonWidth,height:buttonHeight},this.props.style],__source:{fileName:_jsxFileName,lineNumber:136}},
 
 content));
 

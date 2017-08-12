@@ -1,4 +1,4 @@
-Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=require('react');var _react2=_interopRequireDefault(_react);
+Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName='src/common/InnerButton.js';var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=require('react');var _react2=_interopRequireDefault(_react);
 var _propTypes=require('prop-types');var _propTypes2=_interopRequireDefault(_propTypes);
 var _reactNative=require('react-native');
 var _reactNativeCircularProgress=require('react-native-circular-progress');
@@ -104,14 +104,14 @@ var imageStyle=this.props.text?styles.image:styles.imageCenter;
 image=
 _react2.default.createElement(_reactNative.Animated.Image,{
 source:this.props.image,
-style:[imageStyle,this.props.imageStyle,this.props.imageAnim]});
+style:[imageStyle,this.props.imageStyle,this.props.imageAnim],__source:{fileName:_jsxFileName,lineNumber:105}});
 
 
 }
 
 if(this.props.text&&!this.props.progress||!this.props.textInsideProgress){
 text=
-_react2.default.createElement(_reactNative.Animated.Text,{style:[styles.text,this.props.textStyle,this.props.textAnim]},
+_react2.default.createElement(_reactNative.Animated.Text,{style:[styles.text,this.props.textStyle,this.props.textAnim],__source:{fileName:_jsxFileName,lineNumber:114}},
 this.props.text);
 
 
@@ -126,7 +126,7 @@ progressContent=[
 this.props.progressText&&
 _react2.default.createElement(_reactNative.Animated.Text,{
 key:'progressText',
-style:[styles.text,this.props.textStyle,this.props.textAnim]},
+style:[styles.text,this.props.textStyle,this.props.textAnim],__source:{fileName:_jsxFileName,lineNumber:127}},
 
 this.props.progressText),
 
@@ -134,7 +134,7 @@ this.props.progressText),
 this.props.text&&
 _react2.default.createElement(_reactNative.Animated.Text,{
 key:'text',
-style:[styles.text,this.props.textStyle,this.props.textAnim]},
+style:[styles.text,this.props.textStyle,this.props.textAnim],__source:{fileName:_jsxFileName,lineNumber:135}},
 
 this.props.text)];
 
@@ -146,13 +146,13 @@ var progressAnim=this.props.textInsideProgress?
 this.props.progressAnim:
 this.props.imageAnim;
 progress=
-_react2.default.createElement(_reactNative.Animated.View,{style:[styles.progress,this.props.progressStyle,progressAnim]},
+_react2.default.createElement(_reactNative.Animated.View,{style:[styles.progress,this.props.progressStyle,progressAnim],__source:{fileName:_jsxFileName,lineNumber:149}},
 _react2.default.createElement(_reactNativeCircularProgress.AnimatedCircularProgress,{
 size:this.props.progressSize,
 width:this.props.progressWidth,
 fill:this.props.progressFill,
 tintColor:this.props.progressTintColor,
-backgroundColor:this.props.progressBackgroundColor},
+backgroundColor:this.props.progressBackgroundColor,__source:{fileName:_jsxFileName,lineNumber:150}},
 
 progressContent));
 
@@ -164,21 +164,21 @@ if(this.props.spinner&&!this.props.progress&&!this.props.image){
 contentStyle=styles.spinnerContent;
 spinner=
 _react2.default.createElement(_reactNative.Animated.View,{
-style:[styles.spinner,this.props.spinnerStyle,this.props.imageAnim]},
+style:[styles.spinner,this.props.spinnerStyle,this.props.imageAnim],__source:{fileName:_jsxFileName,lineNumber:166}},
 
 _react2.default.createElement(_reactNativeSpinkit2.default,{
 isVisible:true,
 style:[styles.spinner,this.props.spinnerStyle],
 size:this.props.spinnerSize,
 type:this.props.spinnerType,
-color:this.props.spinnerColor}));
+color:this.props.spinnerColor,__source:{fileName:_jsxFileName,lineNumber:169}}));
 
 
 
 }
 
 return(
-_react2.default.createElement(_reactNative.View,{style:[styles.content,contentStyle]},
+_react2.default.createElement(_reactNative.View,{style:[styles.content,contentStyle],__source:{fileName:_jsxFileName,lineNumber:181}},
 image,
 progress,
 spinner,
