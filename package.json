@@ -1,6 +1,6 @@
 {
   "name": "react-native-button-component",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "description": "A Beautiful, Customizable React Native Button component for iOS & Android",
   "main": "dist/index.js",
   "scripts": {
