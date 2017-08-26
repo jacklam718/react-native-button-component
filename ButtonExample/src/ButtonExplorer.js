@@ -23,6 +23,17 @@ export default function ButtonExplorer(props) {
 
         <ButtonComponent
           style={styles.buttonStyle}
+          text="Disabled Buttons"
+          onPress={() => {
+            props.navigator.push({
+              title: 'Disabled Buttons',
+              name: 'disabledButtons',
+            });
+          }}
+        />
+
+        <ButtonComponent
+          style={styles.buttonStyle}
           text="Multiple States Buttons"
           onPress={() => {
             props.navigator.push({

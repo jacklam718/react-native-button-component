@@ -12,11 +12,16 @@ const propTypes = {
   shape: PropTypes.string,
   gradientStart: PropTypes.object,
   gradientEnd: PropTypes.object,
+  disabledGradientStart: PropTypes.object,
+  disabledGradientEnd: PropTypes.object,
+  disabledOpacity: PropTypes.number,
+  disabled: PropTypes.bool,
   backgroundColors: PropTypes.array,
-  buttonStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
-  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
+  buttonStyle: PropTypes.any,
+  style: PropTypes.any,
   progressSize: PropTypes.number,
   onPress: PropTypes.func,
+
 };
 
 const defaultProps = {
@@ -25,6 +30,10 @@ const defaultProps = {
   backgroundColors: ['#4DC7A4', '#66D37A'],
   gradientStart: { x: 0.5, y: 1 },
   gradientEnd: { x: 1, y: 1 },
+  disabledGradientStart: { x: 0, y: 0 },
+  disabledGradientEnd: { x: 0, y: 0 },
+  disabledOpacity: 0.5,
+  disabled: false,
   width: null,
   height: 50,
 };
@@ -33,12 +42,39 @@ class ButtonComponent extends Component {
   static propTypes = propTypes;
   static defaultProps = defaultProps;
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentButton: this.getCurrentButton(props),
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.buttonState !== nextProps.buttonState) {
+      this.setState({
+        currentButton: this.getCurrentButton(nextProps),
+      });
+    }
+  }
+
   shouldComponentUpdate(nextProps) {
     if (this.props.image !== nextProps.image) return true;
     if (this.props.text !== nextProps.text) return true;
     if (this.props.states && this.props.buttonState !== nextProps.buttonState) return true;
     if (this.props.states && this.props.states[this.props.buttonState].progressFill) return true;
     return false;
+  }
+
+  getCurrentButton(props) {
+    return (props.buttonState && props.states)
+      ? props.states[props.buttonState]
+      : props;
+  }
+
+  getProp(propKey) {
+    const { currentButton } = this.state;
+    return currentButton[propKey] || this.props[propKey];
   }
 
   renderButton({ textStyle = styles.text, imageStyle = styles.image }) {
@@ -87,38 +123,37 @@ class ButtonComponent extends Component {
   }
 
   render() {
-    let content;
-    let shape;
+    const style = this.getProp('style');
+    const gradientStart = this.getProp('gradientStart');
+    const gradientEnd = this.getProp('gradientEnd');
+    const disabledGradientStart = this.getProp('disabledGradientStart');
+    const disabledGradientEnd = this.getProp('disabledGradientEnd');
+    const disabledOpacity = this.getProp('disabledOpacity');
+    const disabled = this.getProp('disabled');
+    const backgroundColors = this.getProp('backgroundColors');
+    const type = this.getProp('type');
+    const buttonHeight = this.getProp('height');
+    const buttonWidth = this.getProp('width');
+    const buttonStyle = this.getProp('buttonStyle');
+    const shape = this.getProp('shape');
+    const onPress = this.getProp('onPress');
 
-    const currentButtonState = (this.props.buttonState && this.props.states)
-      ? this.props.states[this.props.buttonState]
-      : this.props;
-    const gradientStart = currentButtonState.gradientStart
-      ? currentButtonState.gradientStart
-      : this.props.gradientStart;
-    const gradientEnd = currentButtonState.gradientEnd
-      ? currentButtonState.gradientEnd
-      : this.props.gradientEnd;
-    const backgroundColors = currentButtonState.backgroundColors || this.props.backgroundColors;
-    const type = currentButtonState.type ? currentButtonState.type : this.props.type;
-
-    const buttonHeight = currentButtonState.height ? currentButtonState.height : this.props.height;
-    const buttonWidth = currentButtonState.width ? currentButtonState.width : this.props.width;
-
-    if (this.props.shape === 'round' || this.props.shape === 'circle') {
-      shape = {
+    let shapeStyle;
+    if (['round', 'circle'].includes(shape)) {
+      shapeStyle = {
         borderRadius: buttonHeight / 2,
       };
     }
 
+    let content;
     if (type === 'primary') {
       content = (
         <LinearGradient
-          start={gradientStart}
-          end={gradientEnd}
+          start={disabled ? disabledGradientStart : gradientStart}
+          end={disabled ? disabledGradientEnd : gradientEnd}
           colors={backgroundColors}
           collapsable={false}
-          style={[styles.button, shape, currentButtonState.buttonStyle]}
+          style={[styles.button, shapeStyle, buttonStyle]}
         >
           {this.renderButton({ textStyle: styles.text })}
         </LinearGradient>
@@ -126,7 +161,7 @@ class ButtonComponent extends Component {
     } else {
       const border = type === 'border' && styles.border;
       content = (
-        <View style={[styles.button, border, shape, currentButtonState.buttonStyle]}>
+        <View style={[styles.button, border, shapeStyle, buttonStyle]}>
           {this.renderButton({ textStyle: styles.secondaryText })}
         </View>
       );
@@ -135,9 +170,18 @@ class ButtonComponent extends Component {
     return (
       <TouchableOpacity
         accessibilityTraits="button"
-        onPress={currentButtonState.onPress}
+        disabled={disabled}
+        onPress={onPress}
         activeOpacity={0.9}
-        style={[styles.container, { width: buttonWidth, height: buttonHeight }, this.props.style]}
+        style={[
+          styles.container,
+          {
+            width: buttonWidth,
+            height: buttonHeight,
+            opacity: disabled ? disabledOpacity : 1,
+          },
+          style,
+        ]}
       >
         {content}
       </TouchableOpacity>

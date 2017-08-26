@@ -12,11 +12,16 @@ type:_propTypes2.default.string,
 shape:_propTypes2.default.string,
 gradientStart:_propTypes2.default.object,
 gradientEnd:_propTypes2.default.object,
+disabledGradientStart:_propTypes2.default.object,
+disabledGradientEnd:_propTypes2.default.object,
+disabledOpacity:_propTypes2.default.number,
+disabled:_propTypes2.default.bool,
 backgroundColors:_propTypes2.default.array,
-buttonStyle:_propTypes2.default.oneOfType([_propTypes2.default.number,_propTypes2.default.object,_propTypes2.default.array]),
-style:_propTypes2.default.oneOfType([_propTypes2.default.number,_propTypes2.default.object,_propTypes2.default.array]),
+buttonStyle:_propTypes2.default.any,
+style:_propTypes2.default.any,
 progressSize:_propTypes2.default.number,
 onPress:_propTypes2.default.func});
+
 
 
 var defaultProps={
@@ -25,13 +30,33 @@ shape:'round',
 backgroundColors:['#4DC7A4','#66D37A'],
 gradientStart:{x:0.5,y:1},
 gradientEnd:{x:1,y:1},
+disabledGradientStart:{x:0,y:0},
+disabledGradientEnd:{x:0,y:0},
+disabledOpacity:0.5,
+disabled:false,
 width:null,
 height:50};var
 
 
-ButtonComponent=function(_Component){_inherits(ButtonComponent,_Component);function ButtonComponent(){_classCallCheck(this,ButtonComponent);return _possibleConstructorReturn(this,(ButtonComponent.__proto__||Object.getPrototypeOf(ButtonComponent)).apply(this,arguments));}_createClass(ButtonComponent,[{key:'shouldComponentUpdate',value:function shouldComponentUpdate(
+ButtonComponent=function(_Component){_inherits(ButtonComponent,_Component);
 
 
+
+function ButtonComponent(props){_classCallCheck(this,ButtonComponent);var _this=_possibleConstructorReturn(this,(ButtonComponent.__proto__||Object.getPrototypeOf(ButtonComponent)).call(this,
+props));
+
+_this.state={
+currentButton:_this.getCurrentButton(props)};return _this;
+
+}_createClass(ButtonComponent,[{key:'componentWillReceiveProps',value:function componentWillReceiveProps(
+
+nextProps){
+if(this.props.buttonState!==nextProps.buttonState){
+this.setState({
+currentButton:this.getCurrentButton(nextProps)});
+
+}
+}},{key:'shouldComponentUpdate',value:function shouldComponentUpdate(
 
 nextProps){
 if(this.props.image!==nextProps.image)return true;
@@ -39,6 +64,17 @@ if(this.props.text!==nextProps.text)return true;
 if(this.props.states&&this.props.buttonState!==nextProps.buttonState)return true;
 if(this.props.states&&this.props.states[this.props.buttonState].progressFill)return true;
 return false;
+}},{key:'getCurrentButton',value:function getCurrentButton(
+
+props){
+return props.buttonState&&props.states?
+props.states[props.buttonState]:
+props;
+}},{key:'getProp',value:function getProp(
+
+propKey){var
+currentButton=this.state.currentButton;
+return currentButton[propKey]||this.props[propKey];
 }},{key:'renderButton',value:function renderButton(_ref)
 
 {var _ref$textStyle=_ref.textStyle,textStyle=_ref$textStyle===undefined?styles.text:_ref$textStyle,_ref$imageStyle=_ref.imageStyle,imageStyle=_ref$imageStyle===undefined?styles.image:_ref$imageStyle;
@@ -69,7 +105,7 @@ progressWidth:this.props.progressWidth,
 progressTintColor:this.props.progressTintColor,
 progressBackgroundColor:this.props.progressBackgroundColor,
 progressStyle:this.props.progressStyle,
-textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:53}});
+textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:89}});
 
 
 }else{
@@ -78,7 +114,7 @@ _react2.default.createElement(_Button2.default,{
 textStyle:this.props.textStyle||textStyle,
 imageStyle:this.props.imageStyle||imageStyle,
 text:this.props.text,
-image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:77}});
+image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:113}});
 
 
 }
@@ -87,38 +123,37 @@ return button;
 }},{key:'render',value:function render()
 
 {
-var content=void 0;
-var shape=void 0;
+var style=this.getProp('style');
+var gradientStart=this.getProp('gradientStart');
+var gradientEnd=this.getProp('gradientEnd');
+var disabledGradientStart=this.getProp('disabledGradientStart');
+var disabledGradientEnd=this.getProp('disabledGradientEnd');
+var disabledOpacity=this.getProp('disabledOpacity');
+var disabled=this.getProp('disabled');
+var backgroundColors=this.getProp('backgroundColors');
+var type=this.getProp('type');
+var buttonHeight=this.getProp('height');
+var buttonWidth=this.getProp('width');
+var buttonStyle=this.getProp('buttonStyle');
+var shape=this.getProp('shape');
+var onPress=this.getProp('onPress');
 
-var currentButtonState=this.props.buttonState&&this.props.states?
-this.props.states[this.props.buttonState]:
-this.props;
-var gradientStart=currentButtonState.gradientStart?
-currentButtonState.gradientStart:
-this.props.gradientStart;
-var gradientEnd=currentButtonState.gradientEnd?
-currentButtonState.gradientEnd:
-this.props.gradientEnd;
-var backgroundColors=currentButtonState.backgroundColors||this.props.backgroundColors;
-var type=currentButtonState.type?currentButtonState.type:this.props.type;
-
-var buttonHeight=currentButtonState.height?currentButtonState.height:this.props.height;
-var buttonWidth=currentButtonState.width?currentButtonState.width:this.props.width;
-
-if(this.props.shape==='round'||this.props.shape==='circle'){
-shape={
+var shapeStyle=void 0;
+if(['round','circle'].includes(shape)){
+shapeStyle={
 borderRadius:buttonHeight/2};
 
 }
 
+var content=void 0;
 if(type==='primary'){
 content=
 _react2.default.createElement(_reactNativeLinearGradient2.default,{
-start:gradientStart,
-end:gradientEnd,
+start:disabled?disabledGradientStart:gradientStart,
+end:disabled?disabledGradientEnd:gradientEnd,
 colors:backgroundColors,
 collapsable:false,
-style:[styles.button,shape,currentButtonState.buttonStyle],__source:{fileName:_jsxFileName,lineNumber:116}},
+style:[styles.button,shapeStyle,buttonStyle],__source:{fileName:_jsxFileName,lineNumber:151}},
 
 this.renderButton({textStyle:styles.text}));
 
@@ -126,7 +161,7 @@ this.renderButton({textStyle:styles.text}));
 }else{
 var border=type==='border'&&styles.border;
 content=
-_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shape,currentButtonState.buttonStyle],__source:{fileName:_jsxFileName,lineNumber:129}},
+_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shapeStyle,buttonStyle],__source:{fileName:_jsxFileName,lineNumber:164}},
 this.renderButton({textStyle:styles.secondaryText}));
 
 
@@ -135,9 +170,18 @@ this.renderButton({textStyle:styles.secondaryText}));
 return(
 _react2.default.createElement(_reactNative.TouchableOpacity,{
 accessibilityTraits:'button',
-onPress:currentButtonState.onPress,
+disabled:disabled,
+onPress:onPress,
 activeOpacity:0.9,
-style:[styles.container,{width:buttonWidth,height:buttonHeight},this.props.style],__source:{fileName:_jsxFileName,lineNumber:136}},
+style:[
+styles.container,
+{
+width:buttonWidth,
+height:buttonHeight,
+opacity:disabled?disabledOpacity:1},
+
+style],__source:{fileName:_jsxFileName,lineNumber:171}},
+
 
 content));
 

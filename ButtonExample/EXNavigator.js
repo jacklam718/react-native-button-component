@@ -4,6 +4,7 @@ import { Navigator } from 'react-native-deprecated-custom-components';
 
 import ButtonExplorer from './src/ButtonExplorer';
 import OneStateButtons from './src/containers/OneStateButtons';
+import DisabledButtons from './src/containers/DisabledButtons';
 import MultipleStatesButtons from './src/containers/MultipleStatesButtons';
 import ProgressButtons from './src/containers/ProgressButtons';
 import SpinnerButtons from './src/containers/SpinnerButtons';
@@ -17,6 +18,9 @@ export default class EXNavigator extends Component {
   renderScene(route, navigator) {
     if (route.name === 'oneStateButtons') {
       return <OneStateButtons navigator={navigator} />;
+    }
+    if (route.name === 'disabledButtons') {
+      return <DisabledButtons navigator={navigator} />;
     }
     if (route.name === 'multipleStatesButtons') {
       return <MultipleStatesButtons navigator={navigator} />;
