@@ -1,6 +1,6 @@
 {
   "name": "react-native-button-component",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "description": "A Beautiful, Customizable React Native Button component for iOS & Android",
   "main": "dist/index.js",
   "scripts": {
@@ -45,7 +45,7 @@
     "react-native-spinkit": "^1.0.2"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
