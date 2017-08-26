@@ -61,8 +61,13 @@ currentButton:this.getCurrentButton(nextProps)});
 nextProps){
 if(this.props.image!==nextProps.image)return true;
 if(this.props.text!==nextProps.text)return true;
+if(this.props.disabled!==nextProps.disabled)return true;
 if(this.props.states&&this.props.buttonState!==nextProps.buttonState)return true;
 if(this.props.states&&this.props.states[this.props.buttonState].progressFill)return true;
+if(
+this.props.states&&
+this.props.states[this.props.buttonState].disabled!==nextProps.states[nextProps.buttonState].disabled)
+return true;
 return false;
 }},{key:'getCurrentButton',value:function getCurrentButton(
 
@@ -105,7 +110,7 @@ progressWidth:this.props.progressWidth,
 progressTintColor:this.props.progressTintColor,
 progressBackgroundColor:this.props.progressBackgroundColor,
 progressStyle:this.props.progressStyle,
-textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:89}});
+textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:94}});
 
 
 }else{
@@ -114,7 +119,7 @@ _react2.default.createElement(_Button2.default,{
 textStyle:this.props.textStyle||textStyle,
 imageStyle:this.props.imageStyle||imageStyle,
 text:this.props.text,
-image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:113}});
+image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:118}});
 
 
 }
@@ -137,6 +142,9 @@ var buttonWidth=this.getProp('width');
 var buttonStyle=this.getProp('buttonStyle');
 var shape=this.getProp('shape');
 var onPress=this.getProp('onPress');
+var disabledStyle=disabled?
+{opacity:disabledOpacity}:
+null;
 
 var shapeStyle=void 0;
 if(['round','circle'].includes(shape)){
@@ -153,7 +161,7 @@ start:disabled?disabledGradientStart:gradientStart,
 end:disabled?disabledGradientEnd:gradientEnd,
 colors:backgroundColors,
 collapsable:false,
-style:[styles.button,shapeStyle,buttonStyle],__source:{fileName:_jsxFileName,lineNumber:151}},
+style:[styles.button,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:159}},
 
 this.renderButton({textStyle:styles.text}));
 
@@ -161,7 +169,7 @@ this.renderButton({textStyle:styles.text}));
 }else{
 var border=type==='border'&&styles.border;
 content=
-_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shapeStyle,buttonStyle],__source:{fileName:_jsxFileName,lineNumber:164}},
+_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:172}},
 this.renderButton({textStyle:styles.secondaryText}));
 
 
@@ -177,10 +185,9 @@ style:[
 styles.container,
 {
 width:buttonWidth,
-height:buttonHeight,
-opacity:disabled?disabledOpacity:1},
+height:buttonHeight},
 
-style],__source:{fileName:_jsxFileName,lineNumber:171}},
+style],__source:{fileName:_jsxFileName,lineNumber:179}},
 
 
 content));

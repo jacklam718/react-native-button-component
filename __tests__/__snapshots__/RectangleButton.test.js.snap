@@ -58,6 +58,7 @@ exports[`Circle Button renders RectangleButton correctly with multi states 1`] =
         },
         undefined,
         undefined,
+        null,
       ]
     }
   >
@@ -213,6 +214,7 @@ exports[`Circle Button renders RectangleButton correctly with one state 1`] = `
         },
         undefined,
         undefined,
+        null,
       ]
     }
   >

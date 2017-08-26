@@ -60,6 +60,7 @@ exports[`renders correctly 1`] = `
           "borderRadius": 25,
         },
         undefined,
+        null,
       ]
     }
   >

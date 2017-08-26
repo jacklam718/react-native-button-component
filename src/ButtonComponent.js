@@ -61,8 +61,13 @@ class ButtonComponent extends Component {
   shouldComponentUpdate(nextProps) {
     if (this.props.image !== nextProps.image) return true;
     if (this.props.text !== nextProps.text) return true;
+    if (this.props.disabled !== nextProps.disabled) return true;
     if (this.props.states && this.props.buttonState !== nextProps.buttonState) return true;
     if (this.props.states && this.props.states[this.props.buttonState].progressFill) return true;
+    if (
+      this.props.states &&
+      this.props.states[this.props.buttonState].disabled !== nextProps.states[nextProps.buttonState].disabled
+    ) return true;
     return false;
   }
 
@@ -137,6 +142,9 @@ class ButtonComponent extends Component {
     const buttonStyle = this.getProp('buttonStyle');
     const shape = this.getProp('shape');
     const onPress = this.getProp('onPress');
+    const disabledStyle = disabled
+      ? { opacity: disabledOpacity }
+      : null;
 
     let shapeStyle;
     if (['round', 'circle'].includes(shape)) {
@@ -153,7 +161,7 @@ class ButtonComponent extends Component {
           end={disabled ? disabledGradientEnd : gradientEnd}
           colors={backgroundColors}
           collapsable={false}
-          style={[styles.button, shapeStyle, buttonStyle]}
+          style={[styles.button, shapeStyle, buttonStyle, disabledStyle]}
         >
           {this.renderButton({ textStyle: styles.text })}
         </LinearGradient>
@@ -161,7 +169,7 @@ class ButtonComponent extends Component {
     } else {
       const border = type === 'border' && styles.border;
       content = (
-        <View style={[styles.button, border, shapeStyle, buttonStyle]}>
+        <View style={[styles.button, border, shapeStyle, buttonStyle, disabledStyle]}>
           {this.renderButton({ textStyle: styles.secondaryText })}
         </View>
       );
@@ -178,7 +186,6 @@ class ButtonComponent extends Component {
           {
             width: buttonWidth,
             height: buttonHeight,
-            opacity: disabled ? disabledOpacity : 1,
           },
           style,
         ]}
