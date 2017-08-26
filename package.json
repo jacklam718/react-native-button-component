@@ -44,6 +44,9 @@
     "react-native-linear-gradient": "^2.0.0",
     "react-native-spinkit": "^1.0.2"
   },
+  "peerDependencies": {
+    "prop-types": "^15.5.10",
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
@@ -56,6 +59,7 @@
     "eslint-plugin-react": "^6.8.0",
     "jest": "20.0.4",
     "jest-react-native": "^18.0.0",
+    "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
     "react-test-renderer": "16.0.0-alpha.12",
