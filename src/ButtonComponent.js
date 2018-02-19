@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, ViewPropTypes } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Button from './common/Button';
+
+const RNViewPropTypes = ViewPropTypes || View.propTypes;
 
 const propTypes = {
   ...Button.propTypes,
@@ -18,7 +20,7 @@ const propTypes = {
   disabled: PropTypes.bool,
   backgroundColors: PropTypes.array,
   buttonStyle: PropTypes.any,
-  style: PropTypes.any,
+  style: RNViewPropTypes.style,
   progressSize: PropTypes.number,
   onPress: PropTypes.func,
 
