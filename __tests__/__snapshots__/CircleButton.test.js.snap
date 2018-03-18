@@ -37,14 +37,14 @@ exports[`Circle Button renders CircleButton correctly with multi states 1`] = `
         4284928890,
       ]
     }
-    end={
+    endPoint={
       Object {
         "x": 1,
         "y": 1,
       }
     }
     locations={null}
-    start={
+    startPoint={
       Object {
         "x": 0.5,
         "y": 1,
@@ -195,14 +195,14 @@ exports[`Circle Button renders CircleButton correctly with one state 1`] = `
         4284928890,
       ]
     }
-    end={
+    endPoint={
       Object {
         "x": 1,
         "y": 1,
       }
     }
     locations={null}
-    start={
+    startPoint={
       Object {
         "x": 0.5,
         "y": 1,

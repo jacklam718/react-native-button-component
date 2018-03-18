@@ -12,6 +12,7 @@ type:_propTypes2.default.string,
 shape:_propTypes2.default.string,
 gradientStart:_propTypes2.default.object,
 gradientEnd:_propTypes2.default.object,
+gradientLocation:_propTypes2.default.array,
 disabledGradientStart:_propTypes2.default.object,
 disabledGradientEnd:_propTypes2.default.object,
 disabledOpacity:_propTypes2.default.number,
@@ -30,6 +31,7 @@ shape:'round',
 backgroundColors:['#4DC7A4','#66D37A'],
 gradientStart:{x:0.5,y:1},
 gradientEnd:{x:1,y:1},
+gradientLocation:null,
 disabledGradientStart:{x:0,y:0},
 disabledGradientEnd:{x:0,y:0},
 disabledOpacity:0.5,
@@ -110,7 +112,7 @@ progressWidth:this.props.progressWidth,
 progressTintColor:this.props.progressTintColor,
 progressBackgroundColor:this.props.progressBackgroundColor,
 progressStyle:this.props.progressStyle,
-textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:94}});
+textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:96}});
 
 
 }else{
@@ -119,7 +121,7 @@ _react2.default.createElement(_Button2.default,{
 textStyle:this.props.textStyle||textStyle,
 imageStyle:this.props.imageStyle||imageStyle,
 text:this.props.text,
-image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:118}});
+image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:120}});
 
 
 }
@@ -161,7 +163,7 @@ start:disabled?disabledGradientStart:gradientStart,
 end:disabled?disabledGradientEnd:gradientEnd,
 colors:backgroundColors,
 collapsable:false,
-style:[styles.button,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:159}},
+style:[styles.button,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:161}},
 
 this.renderButton({textStyle:styles.text}));
 
@@ -169,7 +171,7 @@ this.renderButton({textStyle:styles.text}));
 }else{
 var border=type==='border'&&styles.border;
 content=
-_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:172}},
+_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:174}},
 this.renderButton({textStyle:styles.secondaryText}));
 
 
@@ -187,7 +189,7 @@ styles.container,
 width:buttonWidth,
 height:buttonHeight},
 
-style],__source:{fileName:_jsxFileName,lineNumber:179}},
+style],__source:{fileName:_jsxFileName,lineNumber:181}},
 
 
 content));
