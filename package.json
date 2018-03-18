@@ -40,7 +40,7 @@
   "dependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "lodash": "^4.17.2",
-    "react-native-circular-progress": "cconstantinescu/react-native-circular-progress",
+    "react-native-circular-progress": "https://github.com/jacklam718/react-native-circular-progress.git#v0.0.9",
     "react-native-linear-gradient": "^2.0.0",
     "react-native-spinkit": "^1.0.2"
   },

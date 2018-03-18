@@ -3876,9 +3876,9 @@ react-devtools-core@2.3.1:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-circular-progress@cconstantinescu/react-native-circular-progress:
-  version "0.0.8"
-  resolved "https://codeload.github.com/cconstantinescu/react-native-circular-progress/tar.gz/22587158f6abcac9d6cadf60fdd92bfd9a5f10a9"
+"react-native-circular-progress@https://github.com/jacklam718/react-native-circular-progress.git#v0.0.9":
+  version "0.0.9"
+  resolved "https://github.com/jacklam718/react-native-circular-progress.git#9a9cac1bd2ba1aa69ed027d4f614f0ee342ab5be"
   dependencies:
     art "^0.10.0"
 
