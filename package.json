@@ -1,6 +1,6 @@
 {
   "name": "react-native-button-component",
-  "version": "0.2.27",
+  "version": "0.2.28",
   "description": "A Beautiful, Customizable React Native Button component for iOS & Android",
   "main": "dist/index.js",
   "scripts": {
@@ -40,12 +40,9 @@
   "dependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "lodash": "^4.17.2",
-    "react-native-circular-progress": "https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.9.tar.gz",
+    "react-native-circular-progress": "https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.10.tar.gz",
     "react-native-linear-gradient": "^2.4.0",
     "react-native-spinkit": "^1.0.2"
-  },
-  "peerDependencies": {
-    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -59,7 +56,7 @@
     "eslint-plugin-react": "^6.8.0",
     "jest": "20.0.4",
     "jest-react-native": "^18.0.0",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.1",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
     "react-test-renderer": "16.0.0-alpha.12",

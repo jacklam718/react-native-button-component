@@ -4299,7 +4299,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8:
+prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -4378,9 +4378,9 @@ react-devtools-core@2.3.1:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-"react-native-circular-progress@https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.9.tar.gz":
-  version "0.0.9"
-  resolved "https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.9.tar.gz#2e29e51dac64b0c87f6df0d48406f44ec4289110"
+"react-native-circular-progress@https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.10.tar.gz":
+  version "0.0.10"
+  resolved "https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.10.tar.gz#d0c15831bd11faeff1afa992d608b46e22542e7c"
   dependencies:
     art "^0.10.0"
 
