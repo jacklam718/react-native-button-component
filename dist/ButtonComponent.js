@@ -4,6 +4,8 @@ var _reactNative=require('react-native');
 var _reactNativeLinearGradient=require('react-native-linear-gradient');var _reactNativeLinearGradient2=_interopRequireDefault(_reactNativeLinearGradient);
 var _Button=require('./common/Button');var _Button2=_interopRequireDefault(_Button);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}
 
+var RNViewPropTypes=_reactNative.ViewPropTypes||_reactNative.View.propTypes;
+
 var propTypes=_extends({},
 _Button2.default.propTypes,{
 width:_propTypes2.default.number,
@@ -19,7 +21,7 @@ disabledOpacity:_propTypes2.default.number,
 disabled:_propTypes2.default.bool,
 backgroundColors:_propTypes2.default.array,
 buttonStyle:_propTypes2.default.any,
-style:_propTypes2.default.any,
+style:RNViewPropTypes.style,
 progressSize:_propTypes2.default.number,
 onPress:_propTypes2.default.func});
 
@@ -112,7 +114,7 @@ progressWidth:this.props.progressWidth,
 progressTintColor:this.props.progressTintColor,
 progressBackgroundColor:this.props.progressBackgroundColor,
 progressStyle:this.props.progressStyle,
-textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:96}});
+textInsideProgress:this.props.textInsideProgress,__source:{fileName:_jsxFileName,lineNumber:98}});
 
 
 }else{
@@ -121,7 +123,7 @@ _react2.default.createElement(_Button2.default,{
 textStyle:this.props.textStyle||textStyle,
 imageStyle:this.props.imageStyle||imageStyle,
 text:this.props.text,
-image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:120}});
+image:this.props.image,__source:{fileName:_jsxFileName,lineNumber:122}});
 
 
 }
@@ -163,7 +165,7 @@ start:disabled?disabledGradientStart:gradientStart,
 end:disabled?disabledGradientEnd:gradientEnd,
 colors:backgroundColors,
 collapsable:false,
-style:[styles.button,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:161}},
+style:[styles.button,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:163}},
 
 this.renderButton({textStyle:styles.text}));
 
@@ -171,7 +173,7 @@ this.renderButton({textStyle:styles.text}));
 }else{
 var border=type==='border'&&styles.border;
 content=
-_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:174}},
+_react2.default.createElement(_reactNative.View,{style:[styles.button,border,shapeStyle,buttonStyle,disabledStyle],__source:{fileName:_jsxFileName,lineNumber:176}},
 this.renderButton({textStyle:styles.secondaryText}));
 
 
@@ -189,7 +191,7 @@ styles.container,
 width:buttonWidth,
 height:buttonHeight},
 
-style],__source:{fileName:_jsxFileName,lineNumber:181}},
+style],__source:{fileName:_jsxFileName,lineNumber:183}},
 
 
 content));
