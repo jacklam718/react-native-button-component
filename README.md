@@ -20,11 +20,6 @@ RoundButton
 RectangleButton
 ```
 
-#### Note:
-CircleButton, RoundButton, RectangleButton is on top of ButtonComponent.
-So I recommend you should use CircleButton, RoundButton, RectangleButton, rather than directly use ButtonComponent because those button components may have preset some options.
-
-
 ## Installation
 1. `npm install --save react-native-button-component`
 2. `react-native link react-native-button-component`
