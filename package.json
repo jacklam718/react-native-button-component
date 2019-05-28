@@ -40,7 +40,7 @@
   "dependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "lodash": "^4.17.2",
-    "react-native-circular-progress": "https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.10.tar.gz",
+    "react-native-circular-progress": "^1.1.0",
     "react-native-linear-gradient": "^2.4.0",
     "react-native-spinkit": "^1.0.2"
   },
@@ -59,6 +59,7 @@
     "prop-types": "^15.6.1",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
+    "react-native-svg": "^9.4.0",
     "react-test-renderer": "16.0.0-alpha.12",
     "rimraf": "^2.6.1"
   },
