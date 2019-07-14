@@ -1,6 +1,6 @@
 {
   "name": "react-native-button-component",
-  "version": "0.2.29",
+  "version": "0.2.30",
   "description": "A Beautiful, Customizable React Native Button component for iOS & Android",
   "main": "dist/index.js",
   "scripts": {
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.14",
     "react-native-circular-progress": "https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.10.tar.gz",
     "react-native-linear-gradient": "^2.4.0",
     "react-native-spinkit": "^1.0.2"
