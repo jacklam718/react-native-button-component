@@ -1953,8 +1953,8 @@ home-or-tmp@^2.0.0:
     os-tmpdir "^1.0.1"
 
 hosted-git-info@^2.1.4:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.5.0.tgz#6d60e34b3abbc8313062c3b798ef8d901a07af3c"
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
 
 html-encoding-sniffer@^1.0.1:
   version "1.0.1"
@@ -2719,9 +2719,13 @@ lodash@^3.5.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
+lodash@^4.17.14:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
 
 longest@^1.0.1:
   version "1.0.1"
@@ -3369,18 +3373,19 @@ react-devtools-core@2.3.1:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-"react-native-button-component@file:../":
-  version "0.1.19"
+"react-native-button-component@file:..":
+  version "0.2.30"
   dependencies:
     babel-preset-react-native-stage-0 "^1.0.1"
-    lodash "^4.17.2"
-    react-native-circular-progress cconstantinescu/react-native-circular-progress
-    react-native-linear-gradient "^2.0.0"
+    lodash "^4.17.14"
+    react-native-circular-progress "https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.10.tar.gz"
+    react-native-linear-gradient "^2.4.0"
     react-native-spinkit "^1.0.2"
 
-react-native-circular-progress@cconstantinescu/react-native-circular-progress:
-  version "0.0.8"
-  resolved "https://codeload.github.com/cconstantinescu/react-native-circular-progress/tar.gz/22587158f6abcac9d6cadf60fdd92bfd9a5f10a9"
+"react-native-circular-progress@https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.10.tar.gz":
+  version "0.0.10"
+  uid d0c15831bd11faeff1afa992d608b46e22542e7c
+  resolved "https://github.com/jacklam718/react-native-circular-progress/archive/v0.0.10.tar.gz#d0c15831bd11faeff1afa992d608b46e22542e7c"
   dependencies:
     art "^0.10.0"
 
@@ -3394,11 +3399,9 @@ react-native-deprecated-custom-components@^0.1.1:
     react-timer-mixin "^0.13.2"
     rebound "^0.0.13"
 
-react-native-linear-gradient@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.2.0.tgz#7d9ff9fc3e413079cf3c7354873eaf923145364d"
-  dependencies:
-    prop-types "^15.5.10"
+react-native-linear-gradient@^2.4.0:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
 
 react-native-spinkit@^1.0.2:
   version "1.1.1"
